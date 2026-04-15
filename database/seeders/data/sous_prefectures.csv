@@ -1,0 +1,511 @@
+iddep|idsp|nomspref|superfisp|nbrvilsp|limitgeosp
+CIV010001|CIV01000101|ABIDJAN|585|58|Nord: Anyama, Brofodoumé ; Sud: Golfe de Guinée ; Est: Bingerville, Grand-Bassam ; Ouest: Songon 
+CIV010001|CIV01000102|ANYAMA|480|24|Nord: Guessigué, Azaguié; Sud: Abidjan, Songon ; Est: Brofodoumé  ; Ouest: Songon
+CIV010001|CIV01000103|BINGERVILLE|231|18|Nord: Brofodoumé, Alépé ; Sud: Abidjan, Grand-Bassam ; Est: Oghlwapo ; Ouest: Abidjan
+CIV010001|CIV01000104|BROFODOUME|237|11|Nord: Azaguié ; Sud: Bingerville ; Est: Alépé, Danguira ; Ouest: Anyama 
+CIV010001|CIV01000105|SONGON|620|25|Nord:Sikensi, Gomon, Guessigué; Sud: Golfe de Guinée ; Est: Anyama, Abidjan ; Ouest: Jacqueville, Attoutou, Dabou
+CIV020001|CIV02000101|ATTIEGOUAKRO|308|11|Nord: Lolobo, Akpabo-Sakassou  ; Sud: Angonda; Est: Abigui ; Ouest: Yamoussoukro
+CIV020001|CIV02000102|LOLOBO|499|20|Nord: Molonou, Tiébissou ; Sud: Yamoussoukro, Attiégouakro ; Est: Lomokankro, Akpabo-Sakassou ; Ouest: Yamoussoukro
+CIV020002|CIV02000201|YAMOUSSOUKRO|967|32|Nord: Lolobo, Molonou  ; Sud: Oumé; Kokoumbo ; Est: Toumodi, Attiégouakro ; Ouest: Kossou, Bazré
+CIV020002|CIV02000202|KOSSOU|358|11|Nord: Molonou ; Sud: Bazré ; Est: Yamoussoukro  ; Ouest: Bouaflé , Begbessou 
+CIV030101|CIV03010101|FRESCO|644|10| Nord : Dahiri, Sago ; Sud : Golf de Guinée; Est : Ebonou ; Ouest : Sago, Sassandra
+CIV030101|CIV03010102|DAHIRI|793|4| Nord : Gbagbam; Sud : Fresco; Est : Lauzoua, Ebonou; Ouest : Sago
+CIV030101|CIV03010103|GBAGBAM|578|3| Nord : Niamzeberia, Goudouko ; Sud : Fresco; Est : Guitry ; Ouest : Sago
+CIV030102|CIV03010201|SASSANDRA|864|38| Nord : Lobakuya, Medon, Sago, Dakpadou; Sud : Golf de Guinée ; Est : Sago, Fresco; Ouest : Gabiadji, San-Pedro
+CIV030102|CIV03010202|DAKPADOU|743|14| Nord : Grihiri, Dabouyo ; Sud : Sassandra ; Est : Sago ; Ouest : Medon
+CIV030102|CIV03010203|GRIHIRI|770|6| Nord : Okrouyo ; Sud : Lobakuya, Medon ; Est : Dabouyo, Dakpadou   ; Ouest : Gabiadji
+CIV030102|CIV03010204|LOBAKUYA|445|7| Nord : Méagui, Grihiri; Sud : Sassandra ; Est : Medon ; Ouest : Gabiadji
+CIV030102|CIV03010205|MEDON|389|4| Nord : Grihiri, Dakpadou; Sud : Sassandra ; Est : Dakpadou ; Ouest : Lobakuya
+CIV030102|CIV03010206|SAGO|926|18| Nord : Niambezaria; Sud : Sassandra, Fresco ; Est : Gbagbam, Dahiri ; Ouest : Dabouyo, Dakpadou
+CIV030201|CIV03020101|BUYO|1025|13|Nord : Gbapleu, Guézon ; Sud : Dapéoua ; Est : Iboguhé, Namané ; Ouest : Zagné
+CIV030201|CIV03020102|DAPEOUA|1124|9|Nord : Namané, Buyo ; Sud : Gnamangui, Soubré ; Est : Grand-Zattry; Ouest : Taï, Buyo
+CIV030202|CIV03020202|DABOUYO|426|11|Nord : Guéyo ; Sud : Dakpadou ; Est : Sago, Niambezaria ; Ouest : Grihiri, Dakpadou 
+CIV030202|CIV03020203|GUEYO|321|19|Nord : Serihio, Okrouyo ; Sud : Grihiri, Dabouyo ; Est Doukouyo, Niambezaria; Ouest : Okrouyo, Grihiri
+CIV030203|CIV03020301|MEAGUI|697|27| Nord : Oupoyo, Okrouyo ; Sud : Gabiadji, Doba ; Est : Grihiri ; Ouest : Doba
+CIV030203|CIV03020302|OUPOYO|696|15|Nord : Gnamangui,  Soubré; Sud : Doba, Méagui; Est : Okrouyo, Méagui ; Ouest : Gnamangui, Doba
+CIV030204|CIV03020401|SOUBRE|583|21|Nord : Dapéoua, Grand-Zattry ; Sud : Oupoyo, Okrouyo ; Est : Liliyo, Okrouyo ; Ouest : Gnamangui
+CIV030204|CIV03020402|GNAMANGUI|2003|25|Nord : Dapéoua ; Sud : Doba, Oupoyo ; Est : Soubré ; Ouest : Taï, Djouroutou 
+CIV030204|CIV03020403|GRAND-ZATTRY|988|23|Nord : Grand-Zattry, Namané ; Sud : Soubré, Liliyo ; Est : Dignago; Ouest : Dapéoua
+CIV030204|CIV03020404|LILIYO|672|19|Nord : Dignago, Grand-Zattry ; Sud : Okrouyo ; Est : Soubré ; Ouest : Galébouo
+CIV030204|CIV03020405|OKROUYO|1108|24|Nord : Liliyo ; Sud : Méagui, Grihiri ; Est : Guéyo ; Ouest : Soubré, Oupoyo 
+CIV030301|CIV03030101|SAN-PEDRO|1119|28|Nord : Doba, Gabiadji ; Sud : Golf de Guinée; Est : Grand-Bereby ; Ouest : Sassandra
+CIV030301|CIV03030102|DOBA|1694|12| Nord : Gnamangui, Oupoyo, Méagui; Sud : San-Pedro, Gabiadji ; Est : Gabiadji, Méagui ; Ouest : Djouroutou, Dogbo
+CIV030301|CIV03030103|DOGBO|1214|6| Nord : Doba ; Sud : Grand-Bereby; Est : Doba; Ouest : Djouroutou, Grabo
+CIV030301|CIV03030104|GABIADJI|1242|14| Nord : Méagui ; Sud : San-Pedro, Sassandra ; Est : Lobakuya, Sassandra ; Ouest : Doba
+CIV030301|CIV03030105|GRAND-BEREBY|1609|63| Nord : Dogbo, Grabo ; Sud : Golf de Guinée; Est : San-Pedro; Ouest : Grabo, Tabou
+CIV030302|CIV03030201|TABOU|446|34| Nord : Dapo- Iboké, Grabo ; Sud : Golf de Guinée ; Est : Grand-Bereby ; Ouest : Olodio,Djamandioké
+CIV030302|CIV03030202|DAPO-IBOKE|248|14| Nord : Grabo ; Sud : Taabo, Olodio; Est : Tabou ; Ouest : Olodio 
+CIV030302|CIV03030203|DJAMANDIOKE|450|18| Nord : Olodio; Sud : Golf de Guinée ; Est : Olodio, Tabou ; Ouest : Libéria
+CIV030302|CIV03030204|DJOUROUTOU|2734|19| Nord : Taï ; Sud : Grabo, Dogbo ; Est : Doba, Dogbo; Ouest : Libéria
+CIV030302|CIV03030205|GRABO|1157|19| Nord : Djouroutou ; Sud : Olodio, Dapo-Iboké, Tabou ; Est : Dogbo, Grand-Bereby ; Ouest : Libéria
+CIV030302|CIV03030206|OLODIO|387|26| Nord : Grabo ; Sud : Djamandioké, Tabou ; Est : Dapo- Iboké, Tabou ; Ouest : Libéria
+CIV040101|CIV04010101|ABENGOUROU|782|17| Nord : Yakassé-feyasse Sud : Zaranou ; Est : Niablé ;  Ouest : Aniassué, Amélékia
+CIV040101|CIV04010102|AMELEKIA|469|9|Nord : N’gattakro Sud Abengourou ; Est : Yakassé-Feyassé ;  Ouest : Aniassué, Daoukro, Krégbé 
+CIV040101|CIV04010103|ANIASSUE|753|12| Nord : Amélékia Sud : Adzopé ; est : Zaranou, Amélékia, Abengourou ;  Ouest : Krégbé, Arrah, Bécouefin, Adzopé
+CIV040101|CIV04010104|EBILASSOKRO|253|3| Nord : Zaranou Sud : Bettié Diamarakro ; Est : Ghana ;  Ouest : Zaranou
+CIV040101|CIV04010105|NIABLE|521|10| Nord : Akoboissué Sud : Zaranou ; Est : Ghana ;  Ouest : Abengourou, Yakassé Attobrou
+CIV040101|CIV04010106|YAKASSE-FEYASSE|700|10| Nord : Duffrebo, Agnibilékrou, N’gattakro Sud : Abengourou ; Est : Akoboissué, Agnibilékrou ;  Ouest : Amélékia
+CIV040101|CIV04010107|ZARANOU|569|10| Nord : Niablé, Abengourou Sud : Ebilassokro ; Est : Ghana ;  Ouest : Aniassué, Adzopé, Abongoua
+CIV040102|CIV04010202|AGNIBILEKROU|466|13| Nord : Tankessé Sud : dame, Akoboissué ; Est : dame, Tankessé, Tienkoikro ;  Ouest : Tanguelan, Duffrebo
+CIV040102|CIV04010203|AKOBOISSUE|262|7| Nord : Agnibilékrou ; Sud : niable ; Est : Agnibilékrou, Dame, Ghana ;  Ouest : Yakassé-Feyassé
+CIV040102|CIV04010204|DAME|153|9|Nord : Tienkoikro, Agnibilékro ; Sud : Akoboissué ;  Est : Ghana ;  Ouest : Agnibilékro , Akoboissué
+CIV040102|CIV04010205|DUFFREBO|664|16| Nord : Koun-Fao Sud : Yakassé-Feyassé ; Est : Tankessé, Tanguelan, Agnibilékrou ;  Ouest : Ettrokro, N’gattakro
+CIV040102|CIV04010206|TANGUELAN|242|8| Nord : Agnibilékrou Sud : Agnibilékrou, Duffrebo ; Est : Ghana ;  Ouest : Agnibilékrou, Dufrebo
+CIV040103|CIV04010301|BETTIE|629|10| Nord : Ebilassokro, Diamarakro Sud : Aboisso-Comoé ; Est : Diamarakro, Bianouan ;  Ouest : Bieby, Abongoua, Yakassé-Attobrou
+CIV040103|CIV04010302|DIAMARAKRO|408|12| Nord : Ebilassokro ; Sud : Bettié, Bianouan ; Est : Ghana ;  Ouest : Bettié, Ebilassokro
+CIV040201|CIV04020101|ABOISSO|373|18| Nord : Maféré, Ayamé ; Sud : adiaké, Etuéboué, Adjouan ; Est : Maféré ;  Ouest : Adaou
+CIV040201|CIV04020102|ADAOU|573|15| Nord : Ayamé, Aboisso-Comoé Sud : Adiaké; Est : Aboisso, Ayamé ;  Ouest : Bonoua, Bongo
+CIV040201|CIV04020103|ADJOUAN|263|12|Nord : Maféré, Aboisso ; Sud : Tiapoum; Est : Nouamou, Tiapoum ; Ouest : Aboisso, Etuéboué 
+CIV040201|CIV04020104|AYAME|442|7| Nord : Yaou Sud : Aboisso, Adaou ; Est : Maféré ;  Ouest : Aboisso-Comoé
+CIV040201|CIV04020105|BIANOUAN|750|7| Nord : Ghana Sud : Yaou ; Est : Ghana ;  Ouest : Aboisso-Comoé, Bettié, Diamarakro
+CIV040201|CIV04020106|KOUAKRO|537|10| Nord : Ghana ; Sud : Noé ; Est : Ghana ;  Ouest : Maféré
+CIV040201|CIV04020107|MAFERE|655|9| Nord : Ghana ; Sud : Adjouan, Nouamou ; Est : Kouakro, Ghana ;  Ouest : Aboisso, Ayamé, Adjouan
+CIV040201|CIV04020108|YAOU|608|3| Nord : Bianouan Sud : Ayamé; Est : Ghana ;  Ouest : Aboisso-Comoé
+CIV040202|CIV04020201|ADIAKE|413|24| Nord : Aboisso, Adaou Sud : Assinie-Mafia, Etuéboué ; Est : Etuéboué ;  Ouest : Bonoua 
+CIV040202|CIV04020202|ASSINIE-MAFIA|135|17| Nord : Adiaké, Tiapoum, Etuéboué Sud : Golfe de guinée ; Est : Golfe de Guinée, Tiapoum ;  Ouest : Adaou
+CIV040202|CIV04020203|ETUEBOUE|311|10| Nord : Adjouan, Aboisso Sud : Assinie-Mafia ; Est : Adjouan, Tiapoum ;  Ouest : Adiaké
+CIV040203|CIV04020302|BONGO|313|9| Nord : Allosso, Aboisso-Comoé Sud : Bonoua ; Est : Adaou ;  Ouest : Alépé, Oghlwapo
+CIV040203|CIV04020303|BONOUA|486|15| Nord : Bongo ; Sud : Golfe de Guinée; Est : Assinie-mafia, Adiaké, Adaou ;  Ouest : Grand-Bassam, Oghlwapo
+CIV040203|CIV04020304|GRAND-BASSAM|125|11| Nord : Bingerville Sud : Golfe de guinée; Est : Bonoua, Oghlwapo ;  Ouest : Abidjan
+CIV040204|CIV04020401|TIAPOUM|248|18| Nord : Nouamou, Noé, Adjouan Sud : Ghana; Est : Noé, Ghana ;  Ouest : Assinie-Mafia, Etuéboué
+CIV040204|CIV04020402|NOE|418|8|Nord : Kouakro Sud : Ghana, Tiapoum ; Est : Ghana ;  Ouest : Nouamou, Maféré, Kouakro
+CIV040204|CIV04020403|NOUAMOU|162|9| Nord : Noé, Adjouan, Maféré Sud : Tiapoum ; Est : NOE ;  Ouest : Tiapoum, Adjouan
+CIV050101|CIV05010101|KANIASSO|665|12|Nord : Tienko, Sokoro ; Sud : Odienné ; Est : Samango ; Ouest : Samatiguila
+CIV050101|CIV05010102|GOULIA|1834|19|Nord : Mali, Mahandiana-Sokourani ; Sud : Fengolo, N’Goloblasso ; Est : Kaniasso, Tienko ; Ouest : Sianhala 
+CIV050101|CIV05010103|MAHANDIANA-SOKOURANI|1041|14|Nord : Mali, Débété; Sud : Gbon, Sianhala ;  Est : Mali, Goulia ; Ouest : Tengrela, Blessegue 
+CIV050102|CIV05010201|MINIGNAN|1356|15| Nord : Sokoro, Mali ; Sud : Samango, Kimbirla-sud, Samatiguila ;  Est : Guinée ; Ouest : Kaniasso  
+CIV050102|CIV05010202|KIMBIRLA-NORD|499|6|Nord : Mali ; Sud : Tienko, Sokoro ; Est : Mali ; Ouest : Mali 
+CIV050102|CIV05010203|SOKORO|535|5| Nord : Kimbirla-nord, Mali ; Sud : Minignan, Samatiguila, Kaniasso ;  Est : Guinée ; Ouest : Tienko 
+CIV050102|CIV05010204|TIENKO|911|13|Nord : Kimbirla-nord, Mali; Sud : Goulia, Kaniasso;  Est : Sokoro ; Ouest : Mali 
+CIV050201|CIV05020102|GBELEBAN|240|2|Nord : Guinée, Samango ; Sud : Guinée ; Est : Guinée ; Ouest : Seydougou
+CIV050201|CIV05020103|SAMANGO|1355|19|Nord : Minignan; Sud : Seydougou, Odienné ;  Est : guinée, Gbélégban ; Ouest : Kimbirla-sud
+CIV050201|CIV05020104|SEYDOUGOU|469|6|Nord : Samango; Sud : Guinée; Est : Guinée, Gbélégban ; Ouest : Odienné
+CIV050202|CIV05020201|MADINANI|1433|17|Nord : Fengolo, N’Goloblasso; Sud : Seguelon ; Est : N’Goloblasso, Seguelon ; Ouest : Kolia, Boundiali
+CIV050202|CIV05020202|FENGOLO|826|5|Nord : Goulia, Sianhala ; Sud : Madinani ; Est : Goulia, N’Goloblasso ; Ouest : Kolia Sianhala 
+CIV050202|CIV05020203|N''GOLOBLASSO|882|6|Nord : Goulia, Fengolo; Sud : Tiémé, Seguelon, Madinani ; Est : Tiémé,  Kaniasso, Odienné ; Ouest : Madinani, Fengolo
+CIV050203|CIV05020301|ODIENNE|1513|16|Nord : Samango, Kimbirla-sud, Kaniasso ; Sud : Bougousso, Bako, Dioulatiédougou ;  Est : Seydougou, Guinée ; Ouest : Tiémé, N’Goloblasso 
+CIV050203|CIV05020302|BAKO|1965|26|Nord : Odienné ; Sud : Koro ;  Est : Booko, Borotou ; Ouest : Dioulatiédougou
+CIV050203|CIV05020303|BOUGOUSSO|529|10|Nord : Odienné ; Sud : Guinée;  Est : Guinée ; Ouest : Bako
+CIV050203|CIV05020304|DIOULATIEDOUGOU|1613|10|Nord : Odienné, Seguelon ; Sud : Djibrosso, Koro ;  Est : Bako; Ouest : Seguelon, Gbongaha 
+CIV050203|CIV05020305|TIEME|402|4|Nord : N’Goloblasso; Sud : Seguelon ;  Est : Odienné ; Ouest : Goloblasso, Seguelon 
+CIV050204|CIV05020401|SAMATIGUILA|212|4|Nord : Minignan; Sud : Kimbirla-sud ; Est : Kimbirla-sud ; Ouest : Kaniasso
+CIV050204|CIV05020402|KIMBIRLA-SUD|557|10|Nord : Minignan; Sud : Odienné; Est : Samango ; Ouest : Samatiguila
+CIV050205|CIV05020501|SEGUELON|1428|17|Nord : Tiémé, Madinani, N’Goloblasso ; Sud : Dioulatiédougou, Gbongaha; Est : Dioulatiédougou; Ouest : Boundiali, Madinani
+CIV050205|CIV05020502|GBONGAHA|780|5|Nord : Seguelon ; Sud : Djibrosso, Morondo; Est : Dioulatiédougou; Ouest : Boundiali
+CIV060101|CIV06010101|GAGNOA|726|47|Nord: Ouragahio, Dahiepa-Kehi ; Sud: Doukouyo, Dougroupalégnoa, Gnagbodougnoa ; Est: Djidji, Zikisso ; Ouest: Guibéroua, Galébouo, Serihio
+CIV060101|CIV06010102|BAYOTA|532|14|Nord: Kouetinfla, Sinfra ; Sud: Ouragahio ; Est: Yopohué ; Ouest: Saïoua, Guibéroua, Nahio
+CIV060101|CIV06010103|DAHIEPA-KEHI|246|10|Nord: Yopohué ; Sud: Gagnoa ; Est: Tonla, Diégonefla ; Ouest: Ouragahio
+CIV060101|CIV06010104|DIGNAGO|379|7|Nord:Tapéguia, Nahio ; Sud: Liliyo, Galébouo ; Est: Guibéroua ; Ouest: Grand-Zattry
+CIV060101|CIV06010105|DOUGROUPALEGNOA|450|15|Nord: Gagnoa ; Sud: Doukouyo ; Est : Gnagbodougnoa ; Ouest: Gagnoa, Doukouyo
+CIV060101|CIV06010106|DOUKOUYO|278|7|Nord: Dougroupalégnoa ; Sud: Guéyo, Niambezaria ; Est: Niambezaria, Lakota ; Ouest: Serihio, Guéyo
+CIV060101|CIV06010107|GALEBOUO|379|5|Nord: Dignago, Guibéroua ; Sud: Liliyo, Serihio ; Est: Serihio ; Ouest: Liliyo
+CIV060101|CIV06010108|GNAGBODOUGNOA|139|7|Nord: Gagnoa ; Sud: Lakota, Dougroupalégnoa ; Est: Lakota   ; Ouest: Dougroupalégnoa
+CIV060101|CIV06010109|GUIBEROUA|593|23|Nord: Nahio, Bayota ; Sud: Galébouo ; Est : Ouragahio, Gagnoa; Ouest: Dignago
+CIV060101|CIV06010110|OURAGAHIO|357|16|Nord: Bayota, Yopohué ; Sud: Gagnoa ; Est: Dahiepa-Kehi ; Ouest: Guibéroua
+CIV060101|CIV06010111|SERIHIO|516|6|Nord: Galébouo, Gagnoa; Sud: Doukouyo, Guéyo ; Est: Gagnoa, Doukouyo ; Ouest: Okrouyo, Liliyo
+CIV060101|CIV06010112|YOPOHUE|192|7|Nord: Sinfra ; Sud: Ouragahio, Dahiepa-Kehi, Tonla  ; Est: Guepahouo, Tonla ; Ouest: Bayota
+CIV060102|CIV06010201|OUME|1359|18|Nord: Bazré, Kononfla, Yamoussoukro ; Sud: Hiré, Taabo; Est: Kokumbo, Bonikro ; Ouest: Guepahouo, Tonla, Diégonefla
+CIV060102|CIV06010202|DIEGONEFLA|515|11|Nord: Tonla, Oumé ; Sud: Djidji, Gagoré, Nébo; Est: Oumé   ; Ouest: Yopohué
+CIV060102|CIV06010203|GUEPAHOUO|179|6|Nord: Sinfra, Kononfla ; Sud: Tonla ; Est: Oumé ; Ouest: Yopohué
+CIV060102|CIV06010204|TONLA|230|9|Nord: Guépahouo, Oumé, Yopohué ; Sud:Diégonefla, Dahiepa-Kehi; Est: Diégonefla, Oumé; Ouest: Yopohué, Dahiepa-Kehi
+CIV060201|CIV06020101|DIVO|862|35|Nord: Nébo, Didoko, Ogoudou ; Sud: Dairo-Didizo, Guitry ; Est: Chiepo, Ogoudou ; Ouest: Goudouko, Lakota 
+CIV060201|CIV06020102|CHIEPO|586|10|Nord: Ogoudou ; Sud: Bacanda, Guitry ; Est: Bacanda ; Ouest: Divo
+CIV060201|CIV06020103|DIDOKO|339|10|Nord: Hiré, Zego ; Sud: Ogoudou, Divo; Est: Ogoudou; Ouest: Nébo
+CIV060201|CIV06020104|HIRE|396|6|Nord: Oumé, Taabo ; Sud: Didoko ; Est: Taabo, Zego ; Ouest: Nébo
+CIV060201|CIV06020105|NEBO|391|18|Nord: Diégonefla, Hiré, Oumé; Sud: Divo ; Est: Hiré, Didoko ; Ouest: Gagoré, Lakota 
+CIV060201|CIV06020106|OGOUDOU|594|11|Nord: Zego, Didoko ; Sud: Chiepo, Bacanda; Est: Tiassalé ; Ouest: Didoko, Divo
+CIV060201|CIV06020107|ZEGO|409|5|Nord: Hiré,  Taabo ; Sud: Ogoudou, Didoko ; Est: Taabo, Ogoudou ; Ouest: Hiré, Didoko
+CIV060202|CIV06020201|GUITRY|840|18|Nord: Divo, Chiepo; Sud: Lauzoua, Yocoboué, Grand-Lahou ; Est: Bacanda, Ahouanou ; Ouest: Dairo-Didizo
+CIV060202|CIV06020202|DAIRO-DIDIZO|654|14|Nord: Goudouko, Divo ; Sud: Dahiri, Lauzoua ; Est: Guitry ; Ouest: Gbagbam
+CIV060202|CIV06020203|LAUZOUA|584|7|Nord: Dairo-Didizo, Guitry ; Sud: Ebonou, Grand-Lahou ; Est: Yocoboué ; Ouest: Dahiri
+CIV060202|CIV06020204|YOCOBOUE|383|7|Nord: Guitry ; Sud: Grand- Lahou ; Est: Grand-Lahou ; Ouest: Lauzoua
+CIV060203|CIV06020301|LAKOTA|920|50|Nord: Zikisso, Gagoré, Gagnoa ; Sud: Niambezaria, Goudouko ; Est: Nébo, Divo ; Ouest: Dougroupalégnoa, Gnagbodougnoa
+CIV060203|CIV06020302|DJIDJI|150|6|Nord: Diégonefla ; Sud: Zikisso, Gagoré ; Est: Gagoré ; Ouest: Gagnoa
+CIV060203|CIV06020303|GAGORE|178|5|Nord: Diégonefla ; Sud: Lakota ; Est: Nébo ; Ouest: Djidji, Zikisso
+CIV060203|CIV06020304|GOUDOUKO|421|6|Nord: Lakota ; Sud: Gbagbam ; Est: Divo, Dairo-Didizo ; Ouest: Niambezaria
+CIV060203|CIV06020305|NIAMBEZARIA|921|21|Nord: Lakota, Doukouyo; Sud: Sago, Gbagbam, Dabouyo ; Est: Goudouko, Lakota ; Ouest: Doukouyo, Guéyo
+CIV060203|CIV06020306|ZIKISSO|122|4|Nord: Djidji ; Sud: Lakota ; Est: Gagoré ; Ouest: Gagnoa
+CIV070101|CIV07010101|DIDIEVI|447|23| Nord : Molonou-Blé, Boli ; Sud : Abigui ; Est : Nofou, Bocanda; Ouest : Tiébissou, Lomokankro, Yakpabo-Sakassou
+CIV070101|CIV07010102|BOLI|326|10| Nord : Raviart, Tié-N’Diékro ; Sud : Didiévi ;  Est : Mekro; Ouest : Molonou-Blé
+CIV070101|CIV07010103|MOLONOU-BLE|392|37| Nord : Bouaké ; Sud : Didiévi, Tiébissou ; Est : Boli, Raviart; Ouest : Djebonoua, Tiébissou
+CIV070101|CIV07010104|RAVIART|260|1| Nord : Bounda, Brobo, Bouaké ; Sud : Molonou-Blé, Boli ; Est : Tié-N’'Diékro; Ouest : Bouaké, Molonou-Blé
+CIV070101|CIV07010105|TIE-N'DIEKRO|292|21| Nord : Kondossou, Bonguera, Prikro ; Sud : Akpassanou, Ananda, Ouellé  Est : Koffi-Amonkro, Samanza; Ouest : Tié-N’'Diékro, Kouassi-kouassikro
+CIV070102|CIV07010201|DJEKANOU|289|11| Nord : Kokoumbo, Toumodi ; Sud : Kpouebo, Bonikro  Est : Toumodi; Ouest : Kokoumbo, Bonikro
+CIV070102|CIV07010202|BONIKRO|106|7| Nord : Kokoumbo, Djekanou ; Sud : Oumé, Taabo  Est : Kpouebo; Ouest : Oumé, Kokoumbo
+CIV070103|CIV07010301|TIEBISSOU|905|39| Nord : Sakassou, Djebonoua ; Sud : Abigui ; Est : Didiévi; Ouest : Lolobo, Attiégouakro
+CIV070103|CIV07010302|LOMOKANKRO|355|23| Nord : Tiébissou ; Sud : Yakpabo-Sakassou ; Est : Didiévi; Ouest : Lolobo
+CIV070103|CIV07010303|MOLONOU|721|17| Nord : Ayaou-Sran, Sakassou, Toumodi-Sakassou ; Sud : Kossou, Yamoussoukro, Lolobo ; Est : Tiébissou; Ouest : Pakouabo, Legbessou
+CIV070103|CIV07010304|YAKPABO-SAKASSOU|341|19| Nord : Lomokankro, Didiévi ; Sud : Akpassanou, Ananda, Ouellé  Est : Koffi-Amonkro, Samanza; Ouest : Tié-N’Diékro, Kouassi-Kouassikro
+CIV070104|CIV07010401|TOUMODI|809|31| Nord : Angoda, Abigui ; Sud : Djekanou, Kpouebo ;  Est : Tiémélekro, Dimbokro; Ouest : Djekanou, Kokumbo
+CIV070104|CIV07010402|ANGODA|244|11| Nord : Attiengouakro; Sud ; Toumodi  Est : Abigui; Ouest Toumodi
+CIV070104|CIV07010403|KOKOUMBO|472|20| Nord : Yamoussoukro, Toumodi ; Sud : Oumé ;  Est : Bonikro, Djekanou, Toumodi; Ouest : Oumé
+CIV070104|CIV07010404|KPOUEBO|773|11| Nord : Toumodi ; Sud : Taabo, Pacobo ; Est : Tiémélekro; Ouest : Bonikro
+CIV070201|CIV07020101|DAOUKRO|880|18|Nord : Ouellé ; Sud : Krégbé, Andé ;  Est : N’Gattakro, Amélékia; Ouest : N’Zecrezessou
+CIV070201|CIV07020104|ETTROKRO|718|11|Nord : Samanza ; Sud : N’'gattakro ; Est : Duffrebo; Ouest : Ouellé
+CIV070201|CIV07020105|N''GATTAKRO|257|6|Nord : Ettrokro ; Sud : Amélékia ; Est : Duffrebo; Ouest : Daoukro
+CIV070201|CIV07020107|SAMANZA|478|9|Nord : Koffi-Amonkro, Samanza, Bahia ; Sud : Ettrokro ;  Est : Koun-Fao; Ouest : M’Bahiakro
+CIV070202|CIV07020202|BONGUERA|448|20|Nord : Satama-Sokoura, Bassawa ; Sud : M’Bahiakro ; Est : Prikro ; Ouest : Kondossou 
+CIV070202|CIV07020203|KONDOSSOU|460|15|Nord : Satama-Sokoura, Satama-Sokoro; Sud : M’Bahiakro ; Est : Bonguera ; Ouest : Bounda, Mamini 
+CIV070202|CIV07020204|M''BAHIAKRO|1602|31|Nord : Kondossou, Bonguera, Prikro ; Sud : Akpassanou, Ananda Ouellé ; Est : Koffi-Amonkro, Samanza; Ouest : Tié-N’'Diékro, Kouassi-kouassikro 
+CIV070203|CIV07020301|PRIKRO|868|25|Nord : Bassawa, Famienkro ; Sud : Koffi –Amonkro ; Est : Anianou, Famienkro ; Ouest : Bonguera
+CIV070203|CIV07020302|ANIANOU|247|8| Nord : Kouassi-Datekro, Famienkro ; Sud : Koffi –Amonkro, Nafana ; Est : Kouassi-Datekro, Famienkro ; Ouest : Prikro
+CIV070203|CIV07020303|FAMIENKRO|456|13| Nord : Bassawa, Yorobodi ; Sud : Anianou, Prikro ; Est : Dimandougou ; Ouest : Prikro
+CIV070203|CIV07020304|KOFFI-AMONKRO|427|16|Nord : Prikro, Anianou ; Sud ; Samanza  Est : Nafana; Ouest : M’Bahiakro
+CIV070203|CIV07020305|NAFANA|534|11|Nord : Kouassi-Datekro, Anianou ; Sud : Samanza ;  Est : Bahia, Ouest : Koffi-Amonkro
+CIV070204|CIV07020402|AKPASSANOU|302|4|Nord : M’Bahiakro ; Sud : Bocanda, Mekro ; EST : Ananda ; OUEST : Kouassi-Kouassikro
+CIV070204|CIV07020403|ANANDA|537|12|Nord : M’Bahiakro ; Sud : n'’Zekresessou, Bocanda ; Est : Ouellé; Ouest : Akpassanou
+CIV070204|CIV07020401|OUELLE|729|22|Nord : M’Bahiakro, Samanza ; Sud : Daoukro ;  Est : Ettrokro; Ouest : Ananda
+CIV070301|CIV07030101|ARRAH|620|8| Nord : Krégbé ; Sud : Akoupé, Bécouefin ; Est : Aniassué; Ouest : Kotobi
+CIV070301|CIV07030102|KOTOBI|158|4| Nord : Andé ; Sud : Akoupé ; Est : arrha; Ouest : Bongouanou
+CIV070301|CIV07030103|KREGBE|767|7| Nord : Daoukro, Amélékia ; Sud ; Arrah, Kotobi, Aniassué ;  Est : Aniassué; Ouest : Andé
+CIV070302|CIV07030201|BONGOUANOU|619|14| Nord : Assié-Koumassi, Andé ; Sud : M’Batto, Affery, Akoupé  Est : Kotobi; Ouest : N’Guessankro
+CIV070302|CIV07030202|ANDE|317|11| Nord : Kouadioblékro, Daoukro ; Sud : Kotobi, Bongouanou ; Est : Krégbé; Ouest : Assié-Koumassi
+CIV070302|CIV07030203|ASSIE-KOUMASSI|286|6| Nord : Kouadioblekro ; Sud : Bongouanou ;  Est : Andé; Ouest : N’Guessankro, Bengassou
+CIV070302|CIV07030204|N''GUESSANKRO|339|13| Nord : Bengassou, Assié-Koumassi; Sud : M’Batto, Bongouanou ;  Est : N’'Guessankro; Ouest : Assahara
+CIV070303|CIV07030302|ANOUMABA|366|13| Nord : Tiémélekro, M’Batto ; Sud : Cechi, Morokro ; Est : M’'Batto; Ouest : Tiémélekro
+CIV070303|CIV07030303|ASSAHARA|204|7| Nord : Diangokro, Bengassou ; Sud : Tiémélekro, M’'Batto ;  Est : N’Guessankro; Ouest : Dimbokro, Diangokro
+CIV070303|CIV07030304|M''BATTO|1010|13| Nord : Assahara, N'’Guessankro, Bongouanou ; Sud : Rubino, Cechi, Attobrou ;  Est : Affery; Ouest : Anoumaba
+CIV070303|CIV07030305|TIEMELEKRO|819|22| Nord : Dimbokro, Assahara ; Sud : Morokro ; Est : Anoumaba, M’Batto; Ouest : Toumodi, Kpouebo
+CIV070401|CIV07040101|BOCANDA|1328|60| Nord : Mekro, Akpassanou, Ananda ; Sud : Nofou, Diangokro, Bengassou ; Est : N’zecrezessou, Kouadioblekro; Ouest : Didiévi, Nofou
+CIV070401|CIV07040102|BENGASSOU|327|19|Au nord: bocanda, Kouadioblékro; Sud : Assahara, N’Guessankro ; Est : Assié-Koumassi, Kouadioblékro ; Ouest : Diangokro
+CIV070401|CIV07040103|KOUADIOBLEKRO|434|15| Nord : N’zecrezessou ; Sud ; Bengassou, Assié-Koumassi  Est : Andé, Daoukro; Ouest : Bocanda
+CIV070401|CIV07040104|N'ZEKRESSESSOU|471|10| Nord : Ananda ; Sud : Kouadioblekro ;  Est : Daoukro; Ouest : Bocanda
+CIV070402|CIV07040201|DIMBOKRO|388|26| Nord : Nofou ; Sud : Tiémélekro, Toumodi ; Est : Assahara; Ouest : Abigui
+CIV070402|CIV07040202|ABIGUI|524|15| Nord : Yakpabo, Sakassou, Didiévi, Nofou ; Sud : Toumodi ; Est : Dimbokro, Nofou; Ouest : Attiengouakro, Angoda
+CIV070402|CIV07040203|DIANGOKRO|259|17| Nord : Bocanda ; Sud : Dimbokro, Assahara ; Est : Bengassou; Ouest : Nofou
+CIV070402|CIV07040204|NOFOU|357|16| Nord : Didiévi, Bocanda ; Sud : Dimbokro ; Est : Diangokro; Ouest : Didiévi
+CIV070403|CIV07040302|KOUASSI-KOUASSIKRO|422|19| Nord : Tié-N’Diékro, M’Bahiakro, Prikro ; Sud : Mekro Est : Akpassanou; Ouest : Tié-N’Diékro
+CIV070403|CIV07040303|MEKRO|262|12| Nord : Kouassi-kouassikro ; Sud : Bocanda ;  Est : Akpassanou; Ouest : Boli
+CIV080101|CIV08010101|AGBOVILLE|918|22|Nord : Ananguié, Rubino; Sud : Guessiguié, Azaguié, Danguira ;   Est : Becedi-Brignan, Yakassé-Mé, Grand-Morié ; Ouest :
+CIV080101|CIV08010102|ABOUDE|232|4|Nord : N’Douci, Ananguié ; Sud : Gbolouville,  Est : Agboville, Loviguié ; Ouest : N’Douci
+CIV080101|CIV08010103|ANANGUIE|261|9|Nord : Cechi ; Sud : Aboudé, Agboville  Est : Rubino ; Ouest : N’Douci
+CIV080101|CIV08010104|ATTOBROU|433|5|Nord : M’Batto, Affery ; Sud : Grand-Morié, Agou ;  Est : Adzopé ; Ouest : Rubino
+CIV080101|CIV08010105|AZAGUIE|327|8|Nord : Agboville ; Sud : Anyama, Brofodoumé ;  Est : Danguira ; Ouest : Guessiguié
+CIV080101|CIV08010106|CECHI|246|7|Nord : Anoumaba, M’Batto ; Sud : Ananguié, Rubino ;   Est : Rubino ; Ouest : Morokro, N’Douci
+CIV080101|CIV08010107|GRAND-MORIE|181|8|Nord : Attoutou; Sud : Becedi-Brignan, Agboville ;  Est : Rubino, Agboville ; Ouest : Agou
+CIV080101|CIV08010108|GUESSIGUIE|425|12|Nord : Loviguié, Agboville ; Sud : Songon, Anyama ;  Est : Azaguié; Ouest : Oress-Krobou, Gomon 
+CIV080101|CIV08010109|LOVIGUIE|247|5|Nord : Agboville, Aboudé; Sud : Oress-Krobou, Guessiguié ; Est : Agboville ; Ouest : Oress-Krobou
+CIV080101|CIV08010110|ORESS-KROBOU|204|1| Nord : Aboudé; Sud : Gomon, Guessiguié ; Est : Loviguié ; Ouest : Gomon
+CIV080101|CIV08010501|RUBINO|524|12|Nord : Cechi, M’Batto ; Sud : Agboville, Grand-Morié ; Est : Attobrou, Grand-Morié; Ouest : Ananguié
+CIV080102|CIV08010201|SIKENSI|539|10|Nord : Gbolouville, Gomon; Sud : Lopou ;  Est : Songon, Gomon ; Ouest : Gbolouville, Ahouanou
+CIV080102|CIV08010202|GOMON|231|4| Nord : Oress-Krobou; Sud : Sikensi, Songon; Est : Guessiguié ; Ouest : Sikensi, Gbolouville
+CIV080103|CIV08010301|TAABO|592|15| Nord : Bonikro, Kpouebo ; Sud : Zego, Ogoudou, Tiassalé  Est : Pacobo, Tiassalé ; Ouest : Oumé, Hiré
+CIV080103|CIV08010302|PACOBO|347|6| Nord : Kpouebo ; Sud : Tiassalé ;  Est : Morokro; Ouest : Taabo
+CIV080104|CIV08010401|TIASSALE|694|21|Nord : Taabo, Pacobo ; Sud : Bacanda, Gbolouville ;  Est : Morokro, N’Douci ; Ouest : Ogoudou
+CIV080104|CIV08010402|GBOLOUVILLE|469|8|Nord : Tiassalé, N’Douci, Aboudé ; Sud : Ahouanou ;  Est : Gomon, Sikensi ; Ouest : Bacanda
+CIV080104|CIV08010403|MOROKRO|786|14| Nord : Kpouebo, Tiémélekro, Anoumaba; Sud : N’Douci ;  Est : N’'Douci, Cechi ; Ouest : Pacobo, Tiassalé
+CIV080104|CIV08010404|N''DOUCI|499|12|Nord : Morokro; Sud : Gbolouville, Tiassalé ; Est : Aboudé, Ananguié; Ouest : Tiassalé
+CIV080201|CIV08020101|DABOU|470|18|Nord : Lopou, Songon ; Sud : Attoutou  Est : Songon ; Ouest : Lopou, Toupah
+CIV080201|CIV08020102|LOPOU|560|12|Nord : Sikensi ; Sud : Toupah ;  Est : Dabou ; Ouest : Ahouanou
+CIV080201|CIV08020103|TOUPAH|430|11|Nord : Lopou ; Sud : Attoutou ;  Est : Dabou ; Ouest : Attoutou, Ahouanou
+CIV080202|CIV08020202|AHOUANOU|574|8|Nord : Bacanda, Gbolouville ; Sud : Grand-Lahou ;  Est : Lopou, Toupah ; Ouest : Guitry, Bacanda, Grand-Lahou 
+CIV080202|CIV08020203|BACANDA|379|8|Nord : Tiassalé ; Sud : Ahouanou ; Est : Chiepo, Guitry, Ogoudou ; Ouest : Gbolouville
+CIV080202|CIV08020204|EBONOU|327|14|Nord : Dahiri, Lauzoua ; Sud : Golf de guinée ;   Est : Grand-Lahou ; Ouest : Dahiri, Fresco
+CIV080202|CIV08020205|GRAND-LAHOU|980|22|Nord : Ahouanou, Guitry ; Sud : Toukouzou, Golf de Guinée ;  Est : Attoutou ; Ouest : Yocoboué, Ebonou
+CIV080202|CIV08020206|TOUKOUZOU|23|4|Nord : Grand-Lahou, Attoutou ; Sud : Golf de Guinée ;  Est : Jacqueville ; Ouest : Grand-Lahou
+CIV080203|CIV08020301|JACQUEVILLE|279|25|Nord : Attoutou, Songon ; Sud : Golf de Guinée ;  Est : Songon ; Ouest : Toukouzou
+CIV080203|CIV08020302|ATTOUTOU|423|16|Nord : Toupah, Dabou ; Sud : Jacqueville, Toukouzou ; Est : Songon ; Ouest : Grand-Lahou
+CIV080301|CIV08030101|ADZOPE|1083|13|Nord : Affery, Akoupé, Bécouefin, Aniassué; Sud : Agou, Assikoi ; Est : Abongoua, Yakassé-Attobrou, Bieby ; Ouest : Attobrou, Affery
+CIV080301|CIV08030102|AGOU|253|7| Nord : Attobrou, Adzopé ; Sud : Becedi-Brignan, Yakassé-Mé ; Est : Assikoi ; Ouest : Attobrou, Grand-Morié
+CIV080301|CIV08030103|ANNEPE|168|5| Nord : Assikoi; Sud : Danguira ;  Est : Bieby ; Ouest : Assikoi, Yakassé-Mé 
+CIV080301|CIV08030104|ASSIKOI|203|5| Nord : Adzopé ; Sud : Yakassé-Mé ; Annépé ;   Est : Annépé ; Ouest : Agou
+CIV080301|CIV08030105|BECEDI-BRIGNAN|161|4| Nord : Grand-Morié, Agou; Sud : Agboville ;  Est : Yakassé-Mé ; Ouest : Agboville
+CIV080301|CIV08030106|YAKASSE-ME|162|2| Nord : Becedi-Brignan, Agou; Sud : Agboville, Danguira;  Est : Annépé, Assikoi; Ouest : Becedi-Brignan
+CIV080302|CIV08030201|AKOUPE|569|9|Nord : Bongouanou, Kotobi, Arrah ; Sud : Affery, Adzopé ; Est : Becouefin ; Ouest : Affery
+CIV080302|CIV08030202|AFFERY|641|4|Nord : Bongouanou, Akoupé; Sud : Attobrou, Adzopé ; Est : Adzopé ; Ouest : M’Batto
+CIV080302|CIV08030203|BECOUEFIN|520|4|Nord : Aniassué, Arrah ; Sud : Adzopé, Akoupé ;  Est : Aniassué ; Ouest : Akoupé
+CIV080303|CIV08030302|ABOISSO-COMOE|659|6| Nord : Bieby, Bettié ; Sud : Bongo, Adaou, Ayamé ;  Est : Bianouan, Yaou ; Ouest : Danguira, Allosso
+CIV080303|CIV08030303|ALEPE|427|12| Nord : Danguira, Allosso ; Sud : Oghlwapo ; Est : Bongo ; Ouest : Brofodoumé
+CIV080303|CIV08030304|ALLOSSO|360|7|Nord : Danguira, Aboisso-Comoé ; Sud : Alépé, Bongo ; Est : Aboisso-Comoé   ; Ouest : Danguira
+CIV080303|CIV08030305|DANGUIRA|1145|13|Nord : Bieby, Annépé, Yakassé-Mé ; Sud : Brofodoumé, Alépé;  Est : Aboisso-Comoé   ; Ouest : Azaguié, Agboville 
+CIV080303|CIV08030306|OGHLWAPO|378|9|Nord : Alépé, Bongo ; Sud : Bassam, Bonoua ;  Est : Bonoua, Bongo; Ouest : Bingerville, Alépé
+CIV080304|CIV08030401|YAKASSE-ATTOBROU|558|9| Nord : Abongoua ; Sud : Bieby ;  Est : Bettié ; Ouest : Adzopé
+CIV080304|CIV08030402|ABONGOUA|247|3|Nord : Adzopé, Zaranou ; Sud : Yakassé-Attobrou ;  Est : Zaranou ; Ouest : Adzopé
+CIV080304|CIV08030403|BIEBY|751|2|Nord : Yakassé-Attobrou; Sud : Danguira, Aboisso-Comoé ; Est : Bettié, Aboisso-Comoé ; Ouest : Annépé, Adzopé 
+CIV090101|CIV09010101|BLOLEQUIN|1373|8|Nord : Zou, Yelleu ; Sud: Diboké, Zéaglo, Tinhou ; Est : Bedy-Goazon, Kahin-Zarabaon; Ouest: Zouan-Hounien, Bin-houyé
+CIV090101|CIV09010102|DIBOKE|404|3|Nord : Blolequin, Doké ; Sud : Libéria ; Est : Zéaglo ; Ouest : Tinhou 
+CIV090101|CIV09010103|DOKE|304|9|Nord : Bin-houyé ; Sud : Tinhou, Diboké ; Est : Blolequin ; Ouest : Goulaleu
+CIV090101|CIV09010104|TINHOU|285|6|Nord : Doké, Péhé ; Sud : Libéria ; Est : Diboké ; Ouest : Péhé, Méo
+CIV090101|CIV09010105|ZEAGLO|522|5|Nord : Bedy-Goazon, Blolequin ; Sud : Libéria ; Est : Guiglo ; Ouest : Diboké
+CIV090102|CIV09010201|GUIGLO|1936|18|Nord : Kaadé, Duékoué ; Sud : Zagné ; Est : Gbapleu, Nizahon; Ouest : Zéaglo,  Kaadé
+CIV090102|CIV09010202|BEDY-GOAZON|622|3|Nord : Kahin-Zarabaon, Zou ; Sud : Kaadé, Zéaglo ; Est : Duékoué, Gueyebly; Ouest : Blolequin
+CIV090102|CIV09010203|KAADE|330|6|Nord : Bedy-Goazon ; Sud : Zéaglo, Guiglo ; Est : Duékoué; Ouest : Bedy-Goazon, Zéaglo 
+CIV090102|CIV09010204|NIZAHON|339|4|Nord : Gbapleu, Guiglo ; Sud : Zagné ; Est : Zagné ; Ouest : Guiglo
+CIV090103|CIV09010301|TAI|1357|13|Nord : Zagné, Buyo ; Sud : Djouroutou; Est : Dapéoua, Gnanmangui ; Ouest : Libéria
+CIV090103|CIV09010302|ZAGNE|2982|8|Nord : Gbapleu, Nizahon, Guiglo ; Sud : Taï ; Est : Buyo ; Ouest : Libéria 
+CIV090104|CIV09010401|TOULEPLEU|154|15|Nord: Goulaleu; Sud : Tiobly, Bakoubli ; Est : Méo, Péhé ; Ouest : Nézobly 
+CIV090104|CIV09010402|BAKOUBLY|84|6|Nord : Toulepleu; Sud: Libéria ; Est : Méo, Ouest : Tiobly, Toulepleu
+CIV090104|CIV09010403|MEO|272|9|Nord : Péhé, Toulepleu ; Sud : Libéria ; Est : Tinhou ; Ouest : Bakoubli, Toulepleu 
+CIV090104|CIV09010404|NEZOBLY|69|8|Nord : Libéria ; Sud : Tiobly ; Est : Toulepleu ; Ouest : Libéria
+CIV090104|CIV09010405|PEHE|142|9|Nord : Goulaleu, Doké ; Sud: Méo, Tinhou ; Est : Doké ; Ouest : Toulepleu, Goulaleu
+CIV090104|CIV09010406|TIOBLY|128|10|Nord: Nézobly ; Sud: Libéria ; Est : Toulepleu, Bakoubli ;  Ouest : Libéria
+CIV090201|CIV09020101|BANGOLO|369|22|Nord : Logoualé, Zéo ; Sud : Gueyebly ; Est : Gohouo-Zagna ; Ouest : Zou
+CIV090201|CIV09020102|BEOUE-ZIBIAO|152|16|Nord : Kouibly, Totrodou ; Sud : Gohouo-Zagna ; Est : Dieouzon ; Ouest : Bangolo
+CIV090201|CIV09020103|BLENIMEOUIN|153|3|Nord : Kouibly ; Sud : Guinglo-Tahouaké ; Est : Dania ; Ouest : Dieouzon 
+CIV090201|CIV09020104|DIEOUZON|275|6|Nord : Kouibly ; Sud : Guéhiébli, Bagohouo ; Est : Blenimeouin, Guinglo-Tahouaké ; Ouest : Beoué-Zibiao
+CIV090201|CIV09020105|GOHOUO-ZAGNA|93|3|Nord : Beoue-Zagna, Zéo ; Sud :Guehiebly ;  Est : Dieouzon ; Ouest : Bangolo
+CIV090201|CIV09020106|GUINGLO-TAHOUAKE|337|4|Nord : Blénimouin ; Sud : Bagohouo ; Est : Domangbeu, Dania ; Ouest : Dieouzon 
+CIV090201|CIV09020107|KAHIN-ZARABAON|309|7|Nord : Zou, Guehiebly ; Sud : Bedy-Goazon ; Est : Guehiebly ; Ouest : Zou
+CIV090201|CIV09020108|ZEO|89|9|Nord : Totrodou, Nidrou ; Sud : Bangolo, Gohouo-Zagna ; Est : Beoué-Zibiao ; Ouest : Logoualé 
+CIV090201|CIV09020109|ZOU|534|14|Nord : Mahapleu ; Podiagouiné, Yapleu, Logoualé ; Sud : Bedy-Goazon, Blolequin ; Est : Kahin-Zarabaon, Bangolo ; Ouest : Zonneu, Yelleu 
+CIV090202|CIV09020201|DUEKOUE|1021|18|Nord : Gueyebly, Bagohouo ; Sud : Guiglo, Gbapleu ; Est : Guézon, Bagohouo ; Ouest : Bedy-Goazon, Kaadé
+CIV090202|CIV09020202|BAGOHOUO|471|7|Nord : Guinglo-Tahouaké, Dieouzon ; Sud : Guézon ; Est : Domangbeu ; Ouest : Gueyebly, Duékoué
+CIV090202|CIV09020203|GBAPLEU|522|3|Nord : Guézon, Duékoué ; Sud : Zagné, Buyo ; Est : Buyo ; Ouest : Guiglo, Nizahon
+CIV090202|CIV09020204|GUEHIEBLY|278|8|Nord : Gohouo-Zagna, Dieouzon ; Sud : Duékoué ; Est : Bagohouo, Guézon ; Ouest : Bedy-Goazon, Kaadé
+CIV090202|CIV09020205|GUEZON|739|11| Nord : Domangbeu, Bagohouo ; Sud : Gbapleu, Buyo ; Est : Guéssabo ; Ouest : Duékoué
+CIV090203|CIV09020301|FACOBLY|152|17|Nord : Gbonné, Fangnampleu ;  Sud : Totrodou ; Est : Guézon ; Ouest : Tieny-Seably 
+CIV090203|CIV09020302|KOUA|142|4|Nord : Gbonné, Kamalo ; Sud : Sémien ; Est : Seitifla ; Ouest : Gbonné 
+CIV090203|CIV09020303|SEMIEN|515|5|Nord : Gbonné, Kamalo ; Sud : Ouyably-Gnondrou, Dania ; Est : Seitifla ; Ouest : Koua 
+CIV090203|CIV09020304|TIENY-SEABLY|61|8|Nord : Fangnampleu ; Sud : Nidrou ; Est : Facobly ; Ouest : Man 
+CIV090203|CIV09020305|GUEZON|185|6|Nord : Koua, Gbonné, Sémien ; Sud : Kouibly, Totrodou ; Est : Ouyably-Gnondrou ; Ouest : Facobly 
+CIV090204|CIV09020401|KOUIBLY|297|17|Nord : Ouyably- Gnondrou, Guézon ; Sud : Dieouzon, Blénimeouin, Beoué-Zibiao ; Est : Dania ; Ouest : Guézon, Totrodou 
+CIV090204|CIV09020402|NIDROU|130|7|Nord : Tieny-Seably ; Sud : Zéo, Logoualé;  Est : Totrodou ; Ouest : Bogouiné, Man
+CIV090204|CIV09020403|OUYABLY-GNONDROU|478|13|Nord : Sémien  Sud : Kouibly ; Est : Dania ;  Ouest : Guézon 
+CIV090204|CIV09020404|TOTRODROU|129|14|Nord : Tieny-Seably, Facobly, Guézon ; Sud : Zéo, Beoué-Zibiao ; Est : Kouibly, Beoué-Zibiao ; Ouest : Nidrou 
+CIV090301|CIV09030101|BIANKOUMA|656|28|Nord : Foungbesso ; Sud : Sandougou-Soba, Man, Blapleu ; Est : Kpata, Gbangbegouiné ; ouest : Yorodougou, Santa 
+CIV090301|CIV09030102|BLAPLEU|190|8|Nord : Biankouma ; Sud : Man, Sangouiné ; Est : Gouiné ; Ouest : Biankouma
+CIV090301|CIV09030103|GBANGBEGOUINE|75|5|Nord : Kpata ; Sud : Sandougou-Soba ; Est : Gbonné ; Ouest : Biankouma 
+CIV090301|CIV09030104|GBONNE|986|28|Nord : Gouiné, Kamalo ; Sud : Guézon, Facobly, Fagnampleu, Zapoué ; Est : Koua, Sémien ; Ouest : Kpata, Gbangbegouiné ; Sandougou-Soba
+CIV090301|CIV09030105|GOUINE|1289|20|Nord : Guintéguéla, Dioman ; Sud : Gbonné, Gbangbegouiné, Kpata ; Est : Kamala, Sipie ; Ouest : Foungbesso 
+CIV090301|CIV09030106|KPATA|207|13|Nord : Foungbesso, Gouiné ; Sud : Gbangbegouiné, Gbonné ; Est : Gouiné ; Ouest : Biankouma 
+CIV090301|CIV09030107|SANTA|522|9| Nord : Yorodougou, Biankouma ; Sud : Sangouiné, Danané, Mahapleu ; Est : Blapleu ; Ouest : Daleu 
+CIV090302|CIV09030201|DANANE|647|60|Nord : Daleu, Kouan-Houlé, Gbon-Houyé, Santa ; Sud : Seileu, Zonneu ; Est : Santa, Mahapleu ; Ouest : Libéria 
+CIV090302|CIV09030202|DALEU|849|20|Nord: Sipilou, Yorodougou ; Sud : Danané ; Est : Santa ; Ouest : guinée 
+CIV090302|CIV09030203|GBON-HOUYE|301|17|Nord : Guinée ; Sud : Danané ; Est : Kouan-Houlé ; Ouest : Libéria
+CIV090302|CIV09030204|KOUAN-HOULE|495|25|Nord : Guinée ; Sud : Danané ; Est : Daleu ; Ouest : Gbon-Houyé 
+CIV090302|CIV09030205|MAHAPLEU|527|21|Nord : Danané, Santa ; Sud : Zonneu, Zou ; Est : Sangouiné, Podiagouiné ; Ouest : Danané 
+CIV090302|CIV09030206|SEILEU|166|27|Nord : Danané, Sud : Banneu, Teapleu ; Est : Zonneu ; Ouest : Libéria 
+CIV090302|CIV09030207|ZONNEU|302|16|Nord : Danané, Mahapleu ; Sud : Yelleu, Zou ; Est : Mahapleu ; Ouest : Seileu, Teapleu
+CIV090303|CIV09030301|MAN|582|31| Nord : Blapleu, Biankouma, Sandougou-Soba ; Sud : Gbangbegouiné-yati, Bogouiné, Nidrou ; Est : Zagoué, Fangnampleu, Tieny-Seably ; Ouest : Sangouiné, Biankouma, Sandougou-Soba
+CIV090303|CIV09030302|BOGOUINE|207|15| Nord : Gbangbegouiné-yati, Man ; Sud : Ziogouiné, Logoualé ; Est : Nidrou ;  Ouest : Sangouiné 
+CIV090303|CIV09030303|FAGNAMPLEU|51|4|Nord : Gbonné, Zagoué ; Sud : Tieny-Seably  Est : Facobly ; Ouest : Man, Zagoué
+CIV090303|CIV09030304|GBANGBEGOUINE YATI|125|17|Nord : Man, Sangouiné ;  Sud : Bogouiné ;  Est : Man ;  Ouest : Sangouiné 
+CIV090303|CIV09030305|LOGOUALE|210|12| Nord : Bogouiné, Nidrou ; Sud : Bangolo, Zou ; Est : Zéo, Bangolo ; Ouest : Ziogouiné, Yapleu
+CIV090303|CIV09030306|PODIAGOUINE|248|15| Nord : Sangouiné, Bogouiné ; Sud : zou ;  Est : Ziogouiné, Yapleu ; Ouest : Mahapleu 
+CIV090303|CIV09030307|SANDOUGOU-SOBA|221|15| Nord : Gbangbegouiné ; Sud : Zagoué, Man ; Est : Gbonné ; Ouest : Biankouma, Man 
+CIV090303|CIV09030308|SANGOUINE|650|21| Nord : Santa, Blapleu ; Sud : Podiagouiné ; Est : Man, Gbangbegouiné-yati, Bogouiné ; Ouest : Mahapleu, Danané 
+CIV090303|CIV09030309|YAPLEU|76|2| Nord : Podiagouiné, Ziogouiné ; Sud : Zou ; Est : Logoualé ; Ouest : Podiagouiné 
+CIV090303|CIV09030310|ZAGOUE|79|7| Nord : Sandougou-Soba, Gbonné ; Sud : Man, Fangnampleu ; Est : Fangnampleu ; Ouest : Man 
+CIV090303|CIV09030311|ZIOGOUINE|136|11| Nord : Bogouiné, Sangouiné ; Sud : Yapleu, Zou ; Est : Zeo, Bangolo ; Ouest : Podiagouiné 
+CIV090304|CIV09030401|SIPILOU|686|11|Nord : Gouékan ; Sud : Daleu ; Est : Yorodougou ; Ouest : Guinée 
+CIV090304|CIV09030402|YORODOUGOU|421|7|Nord : Sipilou, Foungbesso ; Sud : Santa, Daleu ; Est : Biankouma ; Ouest : Sipilou 
+CIV090305|CIV09030502|BANNEU|108|11|Nord : Seileu ;  Sud : Zouan-Hounien ; Est : Teapleu ; Ouest : Libéria 
+CIV090305|CIV09030503|BIN-HOUYE|256|21|Nord : Zouan-Hounien; Sud : Goulaleu, Doké ; Est : Libéria ; Ouest : Blolequin 
+CIV090305|CIV09030504|GOULALEU|229|24|Nord : Bin-houyé ;  Sud: Toulepleu ; Est : Doké ; Ouest : Libéria
+CIV090305|CIV09030505|TEAPLEU|193|33|Nord : Seileu, Zonneu ;  Sud : Zouan-Hounien;  Est : Yelleu ; Ouest : Banneu, Seileu  
+CIV090305|CIV09030506|YELLEU|114|12|Nord : Zonneu; Sud : Blolequin, Zouan-Hounien ; Est : Zou ; Ouest : Teapleu
+CIV090305|CIV09030507|ZOUAN-HOUNIEN|464|49|Nord : Banneu, Teapleu, Yelleu ; Sud : Bin-houyé ;  Est : Blolequin; Ouest : Libéria
+CIV100101|CIV10010101|BOUAFLE|1210|30|Nord: Pakouabo, Tibeita ; Sud: Kononfla, Bazre ; Est: Kossou, Begbessou ; Ouest: N'douffoukankro, Bonon
+CIV100101|CIV10010102|BEGBESSOU|305|10|Nord: Pakouabo ; Sud: Bouafle ; Est: Molonou ; Ouest: Bouafle
+CIV100101|CIV10010104|DOUFFOUKANKRO|264|8|Nord: Bonon, Bouaflé ; Sud: Sinfra   Est: Bouaflé ; Ouest: Bonon, Zaguieta
+CIV100101|CIV10010105|PAKOUABO|227|3|Nord: Tibeita ; Sud: Bouablé, Begbessou ; Est: Bouaflé, Tibeita ; Ouest: Begbessou, Molonou 
+CIV100101|CIV10010106|TIBEITA|682|10|Nord: Gohitafla ; Sud: Pakouabo, Bouaflé, Bonon ; Est: Ayaou-sran, Ando-kekrenou ; Ouest: Maminigui, Zuenoula
+CIV100102|CIV10010201|SINFRA|786|23|Nord: Zaguieta, N'douffoukankro, Bouaflé ; Sud: Bayota, Yopouhue, Guepahouo ; Est: Kononfla ; Ouest: Kouetinfla
+CIV100102|CIV10010202|BAZRE|259|6|Nord: Bouafle, Kossou ; Sud: Oumé ; Est: Yamoussoukro ; Ouest: Kononfla 
+CIV100102|CIV10010203|KONONFLA|380|6|Nord: Bouafle ; Sud: Oumé ; Est: Bazre ; Ouest: Sinfra
+CIV100102|CIV10010204|KOUETINFLA|185|6|Nord: Zaguieta ; Sud: Bayota ; Est: Sinfra ; Ouest: Gadouan, Saïoua
+CIV100103|CIV10010301|ZUENOULA|776|36|Nord: Kongasso, Voueboufla ; Sud: Bonon, Bediala, Tibeita ; Est: Maminigui, Gohitafla ; Ouest: Zanzra, kanzra
+CIV100103|CIV10010304|KANZRA|513|19|Nord: Zanzra ; Sud: Bediala ; Est: Zuenoula ; Ouest: Vavoua
+CIV100103|CIV10010306|VOUEBOUFLA|360|15|Nord: Kounahiri Kongasso ; Sud: Gohitafla, Zouenoula ; Est: Iriefla ; Ouest: Zouenoula, Kongasso
+CIV100103|CIV10010307|ZANZRA|529|19|Nord: Zanzra ; Sud: Bediala ; Est: Zuenoula ; Ouest: Vavoua
+CIV100104|CIV10010401|BONON|775|7|Nord: Bediala ; Sud: Zaguieta ; Est: Bouaflé, Tibeita ; Ouest: Gonaté
+CIV100104|CIV10010402|ZAGUIETA|674|11|Nord: Bonon ; Sud: Kouetinfla, Sinfra ; Est: N'douffoukankro ; Ouest: Gadouan 
+CIV100105|CIV10010501|GOHITAFLA|329|22|Nord: Iriefla, Voueboufla ; Sud: Maminigui, Tibeita ; Est: Ando-kekrenou, Kounahiri ; Ouest: Zouenoula, Maminigui
+CIV100105|CIV10010502|IRIEFLA|113|4|Nord: Kounahiri ; Sud: Gohitafla ; Est: Kounahiri ; Ouest: Voueboufla
+CIV100105|CIV10010503|MAMINIGUI|252|7|Nord: Zuenoula, Gohitafla ; Sud: Tibeita ; Est: Tibeita ; Ouest: Zuenoula
+CIV100201|CIV10020101|DALOA|943|40|Nord: Ketro-bassam, Vavoua ; Sud: Boguedia ; Est: Gonate, Gadouan  ; Ouest: Zaibo, Gboguhe 
+CIV100201|CIV10020102|BEDIALA|991|19|Nord: Kanzra, Zuenoula  ; Sud: Daloa, Gonate ; Est: Tibeita ; Ouest: Vavoua 
+CIV100201|CIV10020103|GADOUAN|603|7|Nord: Gonate  ; Sud: Saioua  ; Est: Bonon, Zaguieta ; Ouest: Daloa  
+CIV100201|CIV10020104|GBOGUHE|770|37|Nord: Zaibo ; Sud: Issia, Boguedia ; Est: Daloa  ; Ouest: Gregbeu 
+CIV100201|CIV10020105|GONATE|264|5|Nord: Bediala  ; Sud: Gadouan  ; Est: Bonon ; Ouest: Daloa
+CIV100201|CIV10020106|ZAIBO|231|3|Nord: Dania, Ketro-bassam ; Sud: Gboguhe ; Est: Gregbeu ; Ouest: Daloa 
+CIV100202|CIV10020201|ISSIA|559|40|Nord: Boguedia, Gboguedia ; Sud: Namane, Tapeguia ; Est: Saioua  ; Ouest: Iboguhe
+CIV100202|CIV10020202|BOGUEDIA|218|18|Nord: Daloa, Gboguhe ; Sud: Issia, Saioua ; Est: Daloa, Saioua ; Ouest: Issia, Gboguhe 
+CIV100202|CIV10020203|IBOGUHE|746|13|Nord: Guessabo ; Sud: Namane ; Est: Buyo, Guezon  ; Ouest: Issia
+CIV100202|CIV10020204|NAHIO|213|7|Nord: Saioua ; Sud: Guiberoua, Dignago  ; Est: Bayota  ; Ouest: Tapeguia 
+CIV100202|CIV10020205|NAMANE|521|8|Nord: Issia, Iboguhe  ; Sud: Dapeoua, Grand-zatry ; Est: Tapeguia   ; Ouest: Buyo 
+CIV100202|CIV10020206|SAIOUA|745|29|Nord: Gadouan, Boguedia  ; Sud: Nahio ; Est: Kouetinfla, Bayota ; Ouest: Tapeguia 
+CIV100202|CIV10020207|TAPEGUIA|410|10|Nord: Issia, Saioua  ; Sud: Dignago, Grand-zattry  ; Est: Nahio ; Ouest: Namane
+CIV100203|CIV10020301|VAVOUA|673|8|Nord: Bazra nattis, Dananon ; Sud: Daloa ; Est: Zanzra, Kanzra ; Ouest: Ketro-bassam, Seitifla
+CIV100203|CIV10020302|BAZRA-NATTIS|970|21|Nord: Seguela, Kamalo ; Sud: Vavoua ; Est: Seitifla ; Ouest: Dananon
+CIV100203|CIV10020303|DANANON|928|10|Nord: Massala, Mankono ; Sud: Zanzra ; Est: Kongasso ; Ouest: Bazra-nattis
+CIV100203|CIV10020304|DANIA|1349|10|Nord: Seitifla, Semien ; Sud: Domangbeu, Zaibo ; Est: Ketro-bassam ; Ouest: Guinglo-tahouake, Blenimeouin, Kouibly, Ouyably-gnondrou
+CIV100203|CIV10020305|KETRO BASSAM|499|5|Nord: Seitifla ; Sud: Zaibo, Daloa ; Est: Vavoua ; Ouest: Dania 
+CIV100203|CIV10020306|SEITIFLA|1951|18|Nord: Kamalo  ; Sud: Dania, Ketro-bassam ; Est: Vavoua, Bazra nattis ; Ouest: Semien
+CIV100204|CIV10020401|ZOUKOUGBEU|187|9|Nord: Domangbeu  ; Sud: Guessabo ; Est: Gregbeu ; Ouest: Guessabo
+CIV100204|CIV10020402|DOMANGBEU|591|5|Nord: Dania ; Sud: Zoukougbeu, Guessabo ; Est: Gregbeu  ; Ouest: Bagohouo, Guinglo-tahouake
+CIV100204|CIV10020403|GREGBEU|523|11|Nord: Dania ; Sud: Guessabo ; Est: Gboguihe, Zaibo ; Ouest: Zoukougbeu, Domangbeu
+CIV100204|CIV10020404|GUESSABO|292|15|Nord: Zoukougbeu, Domangbeu ; Sud: Iboguhe ; Est: Gregbeu ; Ouest: Guezon
+CIV110101|CIV11010101|BOUNDIALI|1706|18| Nord : Kolia ; Sud : Morondo ; Est : Ganaoni, Siempurgo ;  Ouest : Madinani, Gbongaha, Seguelon
+CIV110101|CIV11010102|BAYA|346|6| Nord:Katogo ; Sud: Kasséré ; Est: M’Bengué; Ouest: Kouto
+CIV110101|CIV11010103|GANAONI|996|13| Nord : Siempurgo Sud : Morondo, Dianra ; Est : Nafoun, Dianra ;  Ouest : Boundiali
+CIV110101|CIV11010104|KASSERE|657|11| Nord : baya, m’Bengué Sud : siempurgo ; Est : Niofoin, Katiali ;  Ouest : Kolia, Gbon, Kouto
+CIV110101|CIV11010105|SIEMPURGO|666|18| Nord : Kasseré Sud : Ganaoni, nafoun ; Est : Niofoin ;  Ouest : Kolia, Boundiali
+CIV110102|CIV11010201|KOUTO|627|11| Nord : Blessegue ;  Sud : Gbon, Kasseré ; Est : Kasseré, baya/Katogo ;  Ouest : Gbon
+CIV110102|CIV11010202|BLESSEGUE|440|9| Nord:Tengrela, Kanakono  ; Sud: Kouto, Gbon ; Est: Katogo ; Ouest: Mahandiana-Sokourani
+CIV110102|CIV11010203|GBON|590|9|Nord : Blessegue ; Sud : Kolia ; Est : Kasseré, Kouto ;  Ouest : Kolia, sianhala 
+CIV110102|CIV11010204|KOLIA|1070|10| Nord : Sanhala, Gbon Sud : Boundiali ; Est : Kasseré, Siempurgo ;  Ouest : Fengolo, Madinani
+CIV110102|CIV11010205|SIANHALA|760|8| Nord : Mahandiana-Sokoura ; Sud : Fengolo, Kolia ; Est : Gbon ;  Ouest : Goulia
+CIV110103|CIV11010301|TENGRELA|1129|27| Nord : Papara, mali ; Sud : Blessegue; Est : Kanakono ;  Ouest : Débété, Mahandiana, Sokoura
+CIV110103|CIV11010302|DEBETE|282|5| Nord : Mali ; Sud : Tengrela ; Est : Mali,  Tengrela;  Ouest : Tengrela
+CIV110103|CIV11010303|KANAKONO|517|6| Nord : Mali ; Sud : Blessegue, Katogo ; Est : Mali ;  Ouest : Tengrela
+CIV110103|CIV11010304|PAPARA|382|11| Nord : Mali ; Sud : Tengrela ; Est : Mali ;  Ouest : Mali
+CIV110201|CIV11020101|DIKODOUGOU|1254|28| Nord : Guiémbé ; Sud : Boron ; Est : Kanoroba, sirasso ;  Ouest : Kiémou, Tortiya
+CIV110201|CIV11020102|BORON|735|6| Nord : Dikodougou, Kondrobo, Tortiya ; Sud : Marandalah, Sarhala ; Est : Tortiya ;  Ouest : Dianra-village
+CIV110201|CIV11020103|GUIEMBE|483|19| Nord : Dassoungboho, Tioroniadougou ; Sud : Dikodougou, Kiémou ; Est : Kombolokoura, sirasso ;  Ouest : Napié
+CIV110202|CIV11020201|KORHOGO|645|76| Nord : Koni, Lataha, Sohouo ; Sud : Kombolokoura, Dassoungboho, Est : Karakoro;  Ouest : Niofoin 
+CIV110202|CIV11020202|DASSOUNGBOHO|122|20| Nord : Korhogo ; Sud : Guiémbé ; Est : Tioroniaradougou ;  Ouest : Kombolokoura
+CIV110202|CIV11020203|KANOROBA|933|15| Nord : Sirasso ; Sud : Boron ; Est : Dikodougou ;  Ouest : Dianra-village, Dianra
+CIV110202|CIV11020204|KARAKORO|224|50| Nord: Burkina Faso ; Sud: Blésségué, Katogo ; Est: Burkina Faso ; Ouest: Tengrela 
+CIV110202|CIV11020205|KIEMOU|852|24| Nord : Komborodougou, Napié/Guiémbé ; Sud : Tortiya ; Est : Tafiré, Niankaramandougou ;  Ouest : Dikodougou
+CIV110202|CIV11020206|KONI|318|23| Nord : M’Bengué ; Sud : Korhogo ; Est : Sohouo ;  Ouest : Korhogo, M’Bengué, Niofoin
+CIV110202|CIV11020207|KOMBOLOKOURA|150|10| Nord : Korhogo ; Sud : Sirasso ; Est : Guiémbé, Dassoumgboho ;  Ouest : Niofoin
+CIV110202|CIV11020208|KOMBORODOUGOU|278|40| Nord : Sinematiali, Kagbolodougou ; Sud : Kiémou ; Est : Badikaha, Tafiré ;  Ouest : Karakoro, Napié
+CIV110202|CIV11020209|LATAHA|334|65| Nord : Diawala ;  Sud : Korhogo, Karakoro ; Est : Sinematiali, Ferké/Sediogo ;  Ouest : Sohouo
+CIV110202|CIV11020210|NAFOUN|390|6| Nord : Siempurgo, Niofoin ; Sud : Dianra ; Est : Sirasso ;  Ouest : Ganaoni, Siempurgo
+CIV110202|CIV11020211|NAPIELEODOUGOU|362|75| Nord : Karakoro ; Sud : Kiémou ; Est : Komborodougou ;  Ouest : Tioroniadougou, Guiémbé
+CIV110202|CIV11020212|N''GANON|67|5| Nord: Katiali ; Sud: Niofoin  ; Est: Niofoin Ouest: Niofoin 
+CIV110202|CIV11020213|NIOFOIN|1168|26| Nord : Kasseré, M’Bengué, Katiali, N’Ganon ; Sud : Nafoun, sirasso ; Est : Kombolokoura, Koni, Korhogo ;  Ouest : Kasseré, Siempurgo
+CIV110202|CIV11020214|SIRASSO|661|13| Nord : Niofoin ; Sud : Kanorola ; Est : Kombolokoura, Guiémbé, Dikodougou ;  Ouest : Nafoun, Dianra
+CIV110202|CIV11020215|SOHOUO|219|1| Nord: M’Bengué, Diawala ; Sud:Korhogo  ; Est: Lataha;  Ouest: Koni
+CIV110202|CIV11020216|TIORONIARADOUGOU|194|32| Nord : Korhogo;  Sud : Guiémbé ; Est : Karakoro, Napié ;  Ouest : Kombolokoura
+CIV110203|CIV11020301|M''BENGUE|1583|31| Nord : Bougou ; Sud : Kasseré, Koni, Niofoin, Katiali, Sohouo ; Est : Diawala, nielle ;  Ouest : Katogo, baya
+CIV110203|CIV11020302|BOUGOU|410|6| Nord : Ouangolodogou, Mali ; Sud : M’Bengué ; est : Nielle ; Toumoukoro ;  Ouest : Mali, Katogo, M’Bengué
+CIV110203|CIV11020303|KATIALI|263|3| Nord : M’Bengué ; Sud : Nafoin, N’Ganon ; Est : M’Bengué, Niofoin ;  Ouest : Kasseré
+CIV110203|CIV11020304|KATOGO|466|14| Nord : Mali ; Sud : Baya, Kouto ; Est : Bougou, M’Bengué ;  Ouest : Kanakono, Blessegue
+CIV110204|CIV11020401|SINEMATIALI|323|106| Nord : Lataha ; Sud : Ferkessédougou, Komborodougou, Kagbolodougou ; Est : Ferkessédougou ;  Ouest : Komborodougou
+CIV110204|CIV11020402|BAHOUAKAHA|51|1| Nord:Sediogo, Sinématiali; Sud: Komorodougou, Kagolodougou ; Est: Sinématiali ; Ouest: Karakoro
+CIV110204|CIV11020403|KAGBOLODOUGOU|83|9| Nord : Sinematiali Sud : Komborodougou ; Est : Ferkessédougou ;  Ouest : Komborodougou, Sinematiali
+CIV110204|CIV11020404|SEDIEGO|53|34| Nord : Lataha, Sinematiali ; Sud : Sinematiali, Karakoro ; Est : Sinematiali ;  Ouest : Karakoro, Lataha
+CIV110301|CIV11030101|FERKESSEDOUGOU|2128|42| Nord : Ouangolodogou, Burkina Faso ; Sud : Badikaha ; Est : Koumbala, Togoniere ;  Ouest : Diawala, Sinematiali, Lataha, Kagbolodougou
+CIV110301|CIV11030102|KOUMBALA|463|16| Nord : Ferkessédougou, Togoniere ; Sud : Badikaha, Tafire ; Est : Togoniere, Sokolo, Nafana ;  Ouest : Badikaha, Ferkessédougou
+CIV110301|CIV11030103|TOGONIERE|1324|16| Nord : Burkina Faso ; Sud : Koumbala ; Est : Burkina Faso, Sikolo ;  Ouest : Ferkessédougou, Koumbala
+CIV110302|CIV11030201|KONG|1756|19| Nord : Sikolo ; Sud : Foumbolo ; Est : Bilimono ;  Ouest : Koumbala, Tafiré
+CIV110302|CIV11030202|BILIMORO|3644|12| Nord : Sokala-Sobara, Tendene-Bambarasso, Dabakala/Niemene ;  Sud : Tendene-Bambarasso ; Est : Boua ;  Ouest : Kong, Foumbolo
+CIV110302|CIV11030203|SIKOLO|2336|26| Nord : Burkina Faso ;  Sud : Kong ; Est : Tougbo, Niamoué ;  Ouest : Togoniere, Koumbala
+CIV110302|CIV11030204|NAFANA|1138|13|Nord: Koumbala, Sikolo ; Sud: Foumbolo ; Est: Kong;  Ouest: Tafiré
+CIV110303|CIV11030301|OUANGOLODOUGOU|676|12| Nord : Diawala, Kaouara ; Sud : Ferkessédougou ; Est : Burkina Faso ;  Ouest : Diawala
+CIV110303|CIV11030302|DIAWALA|1958|15| Nord : Burkina Faso ; Sud : Koni, Lataha ; Est : Ferkessédougou, Ouangolodogou, Kaouara ;  Ouest : M’Bengué, Niellé, Toumoukoro
+CIV110303|CIV11030303|KAOUARA|672|8| Nord : Burkina Faso ;  Sud : Ouangolodogou ; Est : Burkina Faso ;  Ouest : Diawala
+CIV110303|CIV11030304|NIELLE|600|13| Nord : Toumoukoro ; Sud : Diawala, M’Bengué ; Est : Diawala ;  Ouest : Bougou, M’Bengué
+CIV110303|CIV11030305|TOUMOUKORO|562|13| Nord : Mali ; Sud : Nielle ; Est : Burkina Faso, Diawala ;  Ouest : Bougou
+CIV120101|CIV12010103|BODOKRO|445|34| Nord : Kondrobo, N’Guessankro ; Sud : Béoumi, Lolobo ; Est : Botro, Krofoinsou ; Ouest : Kondrobo
+CIV120101|CIV12010104|KONDROBO|492|10| Nord : Tiéningboué, Bouandougou ; Sud : Béoumi; Est : Bodokro ; Ouest : Kounahiri
+CIV120101|CIV12010105|LOLOBO|127|12| Nord : Bodokro, Botro ; Sud : Languibonou, Béoumi ; Est : Botro, Languibonou ; Ouest : Béoumi
+CIV120101|CIV12010106|MARABADIASSA|73|8| Nord : Bouandougou ; Sud : N’Guessankro, Krofoinsou ; Est : Krofoinsou ; Ouest : Bouandougou
+CIV120101|CIV12010107|N''GUESSANKRO|229|17| Nord : Marabadjassa ; Sud : Bodokro, Botro ; Est : Krofoinsou; Ouest : Bodokro
+CIV120101|CIV12010101|BEOUMI|857|50| Nord : Bodokro, Kondrobo; Sud : Ando-Kekrenou, Sakassou ; Est : Languibonou, Lolobo ; Ouest : Kounahiri
+CIV120101|CIV12010102|ANDO-KEKRENOU|320|17| Nord : Béoumi, Kounahiri ; Sud : Ayaou-Sran, Toumodi-Sakassou ; Est : Béoumi, Sakassou ; Ouest : Tibeita
+CIV120102|CIV12010201|BOTRO|337|26| Nord : Krofoinssou, N’Guessankro ; Sud : Languibonou, Lolobo; Est : Diabo; Ouest : Lolobo, Bodokro 
+CIV120102|CIV12010202|DIABO|296|26| Nord : Katiola; Sud : Languibonou; Est : Bouaké; Ouest : Krofoinsou, Botro
+CIV120102|CIV12010203|KROFOINSOU|366|16| Nord : Bouandougou, Marabadjassa ; Sud : Botro,  Diabo; Est : Katiola; Ouest : Marabadjassa, N’Guessankro
+CIV120102|CIV12010204|LANGUIBONOU|263|32| Nord : Botro ; Sud : Debri-Asrikro, Sakassou; Est : Diabo, Bouaké ; Ouest : Lolobo, Béoumi
+CIV120103|CIV12010301|BOUAKE|1849|166| Nord : Katiola, Timbé, Dabakala; Sud : Djebonoua,  Molonou-Blé, Raviart ; Est : Satama-Sokoro, Mamini, Brobo ; Ouest : Diabo, Languibonou, Dibri-Asrikro
+CIV120103|CIV12010302|BOUNDA|451|14| Nord : Mamini; Sud : Raviart, Tié-N’Diékro, M’Bahiakro; Est : Kondossou ; Ouest : Brobo
+CIV120103|CIV12010303|BROBO|134|17| Nord : Bouaké, Mamini ; Sud : Raviart ; Est : Bounda; Ouest : Bouaké
+CIV120103|CIV12010304|DJEBONOUA|322|47| Nord : Bouaké,  Debri-Asrikro; Sud : Tiébissou ; Est : Bouaké, Molonou-Blé; Ouest : Sakassou, Debri-Asrikro 
+CIV120103|CIV12010305|MAMINI|675|27| Nord : Bouaké, Satama-Sokoro; Sud : Brobo, Bounda; Est : Kondossou; Ouest : Bouaké
+CIV120104|CIV12010401|SAKASSOU|1050|87| Nord : Béoumi, Languibonou; Sud : Molonou, Tiébissou ; Est : Djebonoua, Dibri-Asrikro ; Ouest : Béoumi, Ando-kekrenou, Toumodi-Sakassou
+CIV120104|CIV12010402|AYAOU-SRAN|234|3| Nord : Ando-kekrenou ; Sud : Molonou ; Est : Béoumi, Sakassou; Ouest : Tibeita
+CIV120104|CIV12010403|DIBRI-ASRIKRO|245|35| Nord : Languibonou ; Sud : Djebonoua; Est : Bouaké; Ouest : Sakassou
+CIV120104|CIV12010404|TOUMODI-SAKASSOU|165|2| Nord : Ando-kekrenou ; Sud : Molonou; Est : Sakassou; Ouest : Ayaou-Sran 
+CIV120201|CIV12020101|DABAKALA|1863|65| Nord : Foumbolo ; Sud : Satama-Sokoro; Est : Yaossédougou, Tiendene-Bambarasso; Ouest : Boniéredougou, Sokala-Sobara
+CIV120201|CIV12020102|BASSAWA|1069|22| Nord : Tiédéné-Bambarasso ; Sud : Bonguera, Prikro ;  Est : Yorobodi ; Ouest : Yaossédougou, Dabakala, Satama-Sokoro
+CIV120201|CIV12020103|BONIEREDOUGOU|728|33| Nord : Niéméné ; Sud : Timbé ; Est : Dabakala, Sokala-Sobara ; Ouest : Fronan, Timbé
+CIV120201|CIV12020104|FOUMBOLO|2603|23| Nord : Nafana, Kong ; Sud : Niéméné, Sokala-Sobara, Dabakala, Tiendene-Bambarasso ; Est : Bilimono; Ouest : Niédékaha, Arikokaha, Niakaramadougou 
+CIV120201|CIV12020105|NIEMENE|606|9| Nord : Foumbolo ; Sud : Boniéredougou; Est : Sokala-Sobara ; Ouest : Niakaramadougou 
+CIV120201|CIV12020106|SATAMA-SOKORO|771|14| Nord : Dabakala ; Sud : Mamini, Kondossou ; Est : Satama-Sokoura; Ouest : Bouaké, Dabakala
+CIV120201|CIV12020107|SATAMA-SOKOURA|424|11| Nord : Dabakala; Sud : Kondossou, Bonguera ; Est : Bassawa ; Ouest : Satama-Sokoro 
+CIV120201|CIV12020108|SOKALA-SOBARA|286|15| Nord : Foumbolo ; Sud : Dabakala; Est : Dabakala ; Ouest : Niéméné, Boniéredougou
+CIV120201|CIV12020109|TIENDENE-BAMBARASSO|1338|13| Nord : Foumbolo, Bilimono; Sud : Yaossédougou, Bassawa; Est :Kakpin, Sominassé  ; Ouest : Foumbolo, Sokala-Sobara 
+CIV120201|CIV12020110|YAOSSEDOUGOU|310|9| Nord : Dabakala, Tiendene-Bambarasso ; Sud : Dabakala, Bassawa ; Est : Bassawa; Ouest : Bassawa
+CIV120202|CIV12020201|KATIOLA|670|13| Nord : Fronan ; Sud : Diabo, Bouaké ; Est : Timbé; Ouest :   Krofoinsou
+CIV120202|CIV12020202|FRONAN|1437|8| Nord : Niakaramadougou ; Sud : Katiola, Timbé ; Est : Boniéredougou, Niéméné; Ouest : Bouandougou
+CIV120202|CIV12020203|TIMBE|660|9| Nord : Fronan, Boniéredougou ; Sud : Bouaké ; Est : Dabakala, Boniéredougou ; Ouest : Katiola 
+CIV120203|CIV12020301|NIAKARAMADOUGOU|2608|16| Nord : Tafiré; Sud : Fronan ; Est : Niédékaha, Arikokaha, Niéméné ; Ouest : Tortiya 
+CIV120203|CIV12020302|ARIKOKAHA|820|6| Nord : Niédékaha ; Sud : Niakaramadougou ; Est : Foumbolo ; Ouest : Niakaramadougou
+CIV120203|CIV12020303|BADIKAHA|789|13| Nord : Koumbala, Kagbolodougou; Sud : Tafiré ; Est : Koumbala ; Ouest : Komborodougou 
+CIV120203|CIV12020304|NIEDEKAHA|608|7| Nord : Tafiré ; Sud : Arikokaha; Est : Foumbolo, Nafana ; Ouest : Niakaramadougou
+CIV120203|CIV12020305|TAFIRE|1249|8| Nord : Badikaha ; Sud : Niakaramadougou, Niédékaha; Est : Nafana ; Ouest : Komborodougou
+CIV120203|CIV12020306|TORTIYA|658|11| Nord : Kiémou ; Sud : Marandalah ; Est : Niakaramadougou ; Ouest : Boron  
+CIV130101|CIV13010101|KORO|1015|20| Nord : Borotou, Dioulatiédougou ; Sud : Touba, Guintéguéla ; Est : Niokosso ; Ouest : Dioulatiédougou, Worofla
+CIV130101|CIV13010102|BOOKO|900|43| Nord : Mahandougou ; Sud : Borotou, Niokosso; Est : Guinée ; Ouest : Bako
+CIV130101|CIV13010103|BOROTOU|477|10| Nord : Booko ; Sud : Koro ; Est : Niokosso ; Ouest : Bako 
+CIV130101|CIV13010104|MAHANDOUGOU|154|11| Nord : Guinée ; Sud : Booko ; Est : Guinée ; Ouest : Booko 
+CIV130101|CIV13010105|NIOKOSSO|573|12| Nord : Booko   ; Sud : Touba, Koro; Est : Guinée ; Ouest : Borotou, Koro
+CIV130102|CIV13010201|OUANINOU|714|40| Nord : Guinée ; Sud : Gouékan; Est : Koonan, Santa ; Ouest : Touba, Gbélo
+CIV130102|CIV13010202|GBELO|206|17| Nord : Ouaninou, Touba; Sud : Gouékan; Est : Ouaninou ; Ouest : Touba, Foungbesso
+CIV130102|CIV13010203|GOUEKAN|213|8| Nord : Ouaninou; Sud : Gbélo; Est : Guinée ; Ouest : Foungbesso
+CIV130102|CIV13010204|KOONAN|416|14| Nord : Guinée ; Sud : Santa; Est : Saboudougou ; Ouest : Ouaninou
+CIV130102|CIV13010205|SABOUDOUGOU|380|6| Nord : Guinée ; Sud : Santa; Est : Guinée; Ouest : Koonan 
+CIV130102|CIV13010206|SANTA|380|11| Nord : Saboudougou, Koonan ; Sud : Guinée ; Est : Guinée ; Ouest : Ouaninou
+CIV130103|CIV13010301|TOUBA|965|40| Nord : Guinée, Koro, Niokosso; Sud : Gbélo, Dioman, Foungbesso; Est : Ouaninou ; Ouest : Guintéguéla
+CIV130103|CIV13010302|DIOMAN|280|22| Nord : Touba ; Sud : Gouiné; Est : Touba, Foungbesso; Ouest : Guintéguéla
+CIV130103|CIV13010303|FOUNGBESSO|757|21| Nord : Touba, Gbélo ; Sud : Yorodougou, Biankouma, Kpata ; Est : Gbélo ; Ouest : Gouiné, Dioman
+CIV130103|CIV13010304|GUINTEGUELA|1366|20| Nord : Koro ; Sud : Gouiné, Sifié ; Est : Touba, Dioman ; Ouest : Worofla
+CIV130201|CIV13020101|DIANRA|1630|23| Nord : Ganaoni ; Sud : Dianra-village ; Est : Morondo, Fadiadougou ; Ouest :Kanoraba
+CIV130201|CIV13020102|DIANRA-VILLAGE|1494|19| Nord : Dianra, Fadiadougou ; Sud : Sarhala ; Est : Fadiadougou, Kani ; Ouest : Kanoroba, Boron  
+CIV130202|CIV13020201|KOUNAHIRI|953|33| Nord : Tiéningboué ; Sud : Vouéboufla, Iriéfla, Gohitafla ; Est : Kongasso ; Ouest : Kondrobo, Béoumi, Ando-kekrenou
+CIV130202|CIV13020202|KONGASSO|848|17| Nord : Mankono ; Sud : Dananon, Zanzra, Zuenoula; Est : Mankono; Ouest : Kounahiri, Tiéningboué
+CIV130203|CIV13020301|MANKONO|1391|27| Nord : Saralah ; Sud : Kongasso, Dananon ; Est : Dualla, Massala ; Ouest : Marandalah, Tiéningboué 
+CIV130203|CIV13020302|BOUANDOUGOU|1384|22| Nord : Marandalah ; Sud : Marabadjassa, Kondrobo, Bodokro; Est : Tiéningboué, Marandalah ; Ouest : Fronan 
+CIV130203|CIV13020303|MARANDALLAH|1015|23| Nord : Boron, Tortiya ; Sud : Bouandougou, Tiéningboué ; Est : Sarhala, Mankono; Ouest : Niakara 
+CIV130203|CIV13020304|SARHALA|1316|22| Nord : Dianra-village ; Sud : Mankono ; Est : Kani, Bobi-Diarabana ; Ouest : Boron, Marandalah 
+CIV130203|CIV13020305|TIENINGBOUE|989|30| Nord : Marandalah ; Sud : N’Guessankro, Kondrobo ; Est : Mankono, Kongasso, Kounahiri ; Ouest : Bouandougou
+CIV130301|CIV13030101|KANI|1341|15| Nord : Fadiadougou ; Sud : Bobi-Diarabana ; Est : Worofla ; Ouest : Dianra-village, Sarhala
+CIV130301|CIV13030102|DJIBROSSO|1775|12| Nord : Dioulatiédougou, Gbongaha ; Sud : Worofla; Est : Dioulatiédougou; Ouest : Morondo, Fadiadougou
+CIV130301|CIV13030103|FADIADOUGOU|1107|10| Nord : Morondo, Dianra ; Sud : Kani ; Est : Djibrosso ; Ouest : Dianra, Dianra-village
+CIV130301|CIV13030104|MORONDO|667|9| Nord : Gbongaha, Boundiali ; Sud : Fadiadougou ; Est : Djibrosso ; Ouest : Dianra
+CIV130302|CIV13030201|SEGUELA|732|44| Nord : Worofla, Bobi-Diarabana ; Sud : bazzra nattis; Est : Sifié, Kamalo ; Ouest : Massala
+CIV130302|CIV13030202|BOBI|405|7| Nord : Kani ; Sud : Dualla, Séguéla, Massala; Est : Worofla; Ouest : Sarhala, Mankono
+CIV130302|CIV13030203|DIARABANA|724|11| Nord : Kani ; Sud : Dualla, Séguéla, Massala; Est : Worofla; Ouest : Sarhala, Mankono
+CIV130302|CIV13030204|DUALLA|352|11| Nord : Bobi-Diarabana; Sud : Massala ; Est : Bobi-Diarabana; Ouest : Mankono
+CIV130302|CIV13030205|KAMALO|422|12| Nord : Sifié ; Sud : Seitifla ; Est :bazzra nattis ; Ouest : Séguéla
+CIV130302|CIV13030206|MASSALA|946|32| Nord : Dualla, Bobi-Diarabana ; Sud : Dananon; Est : Séguéla ; Ouest : Mankono
+CIV130302|CIV13030207|SIFIE|507|20| Nord : Worofla ; Sud : Kamalo; Est : Guintéguéla, Gouiné ; Ouest : Séguéla
+CIV130302|CIV13030208|WOROFLA|2514|30| Nord : Djibrosso ; Sud : Sifié, Séguéla ; Est : Koro, Guintéguéla ; Ouest : Kani, Bobi-Diarabana 
+CIV140101|CIV14010101|BOUNA|8198|160|Nord : Niamoué, Bouko; Sud : Kakpin, Nassian, Koutouba, Youndouo; Est : Ondefidouo ; Ouest : Bilimono
+CIV140101|CIV14010102|BOUKO|714|83|Nord : Doropo, Danoa ; Sud : Bouna ; Est : Burkina-Faso Ouest : Doropo, Niamoué
+CIV140101|CIV14010103|ONDEFIDOUO|1780|21|Nord : Bouna ; Sud : Youndouo, Tagadi; Est : Ghana ;  Ouest : Bouna
+CIV140101|CIV14010104|YOUNDOUO|688|23|Nord : Ondefidouo ; Sud : Laoudi-Ba, Tagadi, Bogofla ; Est : Ondefidouo, Tagadi ;  Ouest : Bouna, Koutouba
+CIV140102|CIV14010201|DOROPO|871|106|Nord : Burkina-Faso ; Sud : Niamoué, Bouko; Est : Kalamon, Danoa ; Ouest : Gogo, Niamoué
+CIV140102|CIV14010202|DANOA|339|47|Nord :Kalamon, Burkina-Faso ;Sud :Bouko ; Est : Burkina-Faso;  Ouest :Doropo
+CIV140102|CIV14010203|KALAMON|336|21|Nord : Burkina-Faso ; Sud : Doropo, Danoa; Est : Burkina-Faso ; Ouest : Doropo
+CIV140102|CIV14010204|NIAMOUE|3470|71|Nord : Tougbo, Tehini ; Sud : Bilimono, Bouna ; Est : Doropo, Bouko ; Ouest : Sikolo, Kong 
+CIV140103|CIV14010301|NASSIAN|985|15|Nord : Kakpin, Bouna, Koutouba ; Sud : Sandegué, Taoudi ; Est : Bondo, Laoudi-Ba  Ouest : Sominassé 
+CIV140103|CIV14010302|BOGOFA|209|4|Nord : Koutouba, Youndouo ; Sud : Laoudi-Ba ; Est : Youndouo ;  Ouest : Koutouba
+CIV140103|CIV14010303|KAKPIN|349|8|Nord : Bouna ; Sud : Sominassé ; Est : Bouna ; Ouest : Tendené-Bambarasso
+CIV140103|CIV14010304|KOTOUBA|400|9|Nord : Bouna; Sud : Nassian ; Est :Youndouo, Bogofla ;  Ouest : Nassian
+CIV140103|CIV14010305|SOMINASSE|639|8|Nord : Kakpin ; Sud : Yorobodi, Sandegué ; Est : Nassian; Ouest : Yorobodi, Tendéné-Bambarasso
+CIV140104|CIV14010401|TEHINI|1185|31|Nord : Burkina-Faso ; Sud : Niamoué ; Est : Tougbo ; Ouest : Gogo
+CIV140104|CIV14010402|GOGO|646|47|Nord : Burkina-Faso ; Sud : Tehini; Est : Doropo ; Ouest : Tehini
+CIV140104|CIV14010403|TOUGBO|1013|17| Nord : Burkina-Faso ; Sud : Niamoué ; Est : Tehini; Ouest : Burkina-Faso  
+CIV140201|CIV14020101|BONDOUKOU|714|32|Nord : Yezimala, Sorobango; Sud : Gouméré, Appimandou, Pinda-Borokro ; Est : Ghana ;  Ouest : Tabagne, Sapli-Sepingo
+CIV140201|CIV14020102|APPIMANDOUM|123|10| Nord : Bondoukou ; Sud : Assueffry ; Est : Gouméré ; Ouest : Pinda-Borokro
+CIV140201|CIV14020103|BONDO|831|16|Nord : Nassian, Laoudi-Ba ; Sud : Taoudi, Tabagne ; Est : Sapli-Sepingo, Yezimala  Ouest : Nassian 
+CIV140201|CIV14020104|GOUMERE|313|20|Nord : Bondoukou, Tabagne ; Sud : Tanda; Est : Appimandou ; Ouest : Amanvi
+CIV140201|CIV14020105|LAOUDI-BA|1680|25| Nord : Bogofa, Youndouo ; Sud : Yezimala, Sorobango ; Est : Tagadi ;  Ouest : Nassian, Bondo
+CIV140201|CIV14020106|PINDA-BOROKO|87|6|Nord : Bondoukou ; Sud : Ghana ; Est : Ghana ; Ouest : Appimandou
+CIV140201|CIV14020107|SAPLI-SEPINGO|124|6|Nord : Yezimala, Bondo ; Sud : Tabagne; Est : Bondoukou Ouest : Bondo
+CIV140201|CIV14020108|SOROBANGO|909|20|Nord : Tagadi, Laoudi-Ba ; Sud : Bondoukou ; Est : Ghana ;  Ouest : Yezimala, Laoudi-Ba
+CIV140201|CIV14020109|TABAGNE|339|19|Nord : Sapli-Sepingo, Bondo ; Sud : Amanvi, Gouméré; Est : Bondoukou ;   Ouest : Taoudi 
+CIV140201|CIV14020110|TAGADI|1294|7|Nord : Youndouo, Ondefidouo ; Sud : Sorobango ; Est : Ghana ; Ouest : Laoudi-Ba 
+CIV140201|CIV14020111|TAOUDI|699|12|Nord : Nassian, Bondo; Sud : Bandakagni –Tomora, Tchedio ; Est : Tabagne, Amanvi
+CIV140201|CIV14020112|YEZIMALA|99|7|Nord : Laoudi-Ba ; Sud : Sapli-Sepingo, Bondoukou ; Est : Sorobango ;  Ouest : Bondo
+CIV140202|CIV14020202|BOAHIA|513|9|Nord : Kouassi-Datekro ; Sud : Koun-Fao, Samanza ; Est : Koun-Fao ;  Ouest : Nafana
+CIV140202|CIV14020203|KOKOMIAN|141|9|Nord : Kouassi-Niaguini ; Sud : Tienkoikro ; Est : Ghana ; Ouest : Tankessé
+CIV140202|CIV14020204|KOUASSI-DATTEKRO|1077|26|Nord : Dimandougou, Sandegué, Bandakagni –Tomora ; Sud : Nafana, Boahia ; Est :Diamba, Koun-Fao, Tchedio ;  Ouest :Anianou
+CIV140202|CIV14020205|KOUN-FAO|965|29| Nord : Diamba, Tanda ; Sud : Tankessé ; Est : Transua, Kouassia-Niaguini ;  Ouest : Boahia, Samanza
+CIV140202|CIV14020206|TANKESSE|628|19|Nord : Koun-Fao, Kouassia-Niaguini ; Sud : Agnibilékro, Tienkoikro ; Est : Kokomian, Tienkoikro Ouest :Duffrebo
+CIV140202|CIV14020207|TIENKOIKRO|291|13|Nord : Tankessé,Kokomian; Sud : Ghana; Est : Ghana ;  Ouest : Agnibilékro, Dame
+CIV140203|CIV14020301|SANDEGUE|755|13|Nord : Sominassé, Nassian ; Sud : Kouassi-Datekro ; Est : Taoudi, Bandakagni –  Tomora ; Ouest : Yorobodi, Dimandougou
+CIV140203|CIV14020302|BANDAKAGNI|287|6| Nord : Taoudi ; Sud : Kouassi-Datekro ; Est : Tchedio ;  Ouest : Sandegué
+CIV140203|CIV14020303|DIMANDOUGOU|493|7|Nord : Yorobodi ; Sud : Kouassi-Datekro ; Est : Sandegué ;  Ouest : Famienkro
+CIV140203|CIV14020304|YOROBODI|1180|9| Nord : Sominassé, Tendené-Bambarasso ; Sud : Dimandougou, Famienkro ; Est : Sandegué ;  Ouest : Bassawa 
+CIV140204|CIV14020401|TANDA|737|34|Nord : Tchedio, Amanvi, Gouméré ; Sud : Koun-Fao, Transua; Est : Assueffry, Appimandou, Ouest : Diamba
+CIV140204|CIV14020402|AMANVI|135|11|Nord : Taoudi, Tabagne; Sud : Tanda ; Est : Gouméré, Tabagne  Ouest : Tchedio
+CIV140204|CIV14020403|DIAMBA|375|19| Nord : Tchedio ; Sud : Koun-Fao, Est : Tanda  Ouest : Sandegué
+CIV140204|CIV14020404|TCHEDIO|318|12|Nord : Taoudi ; Sud : Diamba, Tanda ; Est : Amanvi ; Ouest : Kouassi-Datekro, Bandakagni –Tomora 
+CIV140205|CIV14020501|TRANSUA|503|31|Nord : Tanda, Assueffry ; Sud : Kouassia-Niaguini ; Est : Ghana,  Ouest : Koun-Fao
+CIV140205|CIV14020502|ASSUEFFRY|421|27|Nord : Tanda, Appimandou ; Sud : Transua ; Est : Ghana ;  Ouest : Tanda
+CIV140205|CIV14020503|KOUASSI-NIAGUNI|265|13|Nord : Transua ; Sud : Kokomian ; Est : Ghana ;  Ouest : Koun-Fao, Tankessé
