@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPHD-KOUMASSI | Espace Citoyen</title>
+    <title>@yield('title')</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -138,8 +138,8 @@
 <div class="container-fluid p-0 d-none d-lg-block">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('individu.profile.show') }}">
-                <i class="bi bi-shield-check me-2 text-primary-gold"></i>EPHD-CITOYEN
+            <a class="navbar-brand border-rounded" href="{{ route('individu.profile.show') }}">
+                <img src="/mypapyrus.jpeg" alt="">
             </a>
             
             <div class="collapse navbar-collapse" id="navbarNav">

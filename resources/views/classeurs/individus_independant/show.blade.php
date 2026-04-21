@@ -134,9 +134,13 @@
                                         </div>
                                     </td>
                                     <td class="text-end pe-4">
-                                        <a class="btn btn-sm btn-download px-3" href="{{ route('individu.classeurs.documents.download', [$classeur, $document]) }}" title="Paiement requis avant téléchargement">
-                                            <i class="bi bi-credit-card me-1"></i> Payer & Télécharger
-                                        </a>
+                                     <form action="{{ route('payment.initiate') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="document_id" value="{{ $document->id }}">
+                                        <button class="btn btn-sm btn-download px-3" type="submit">
+                                            <i class="bi bi-credit-card me-1"></i> Payer et télécharger
+                                        </button>
+                                     </form>
                                     </td>
                                 </tr>
                             @endforeach

@@ -8,14 +8,16 @@ use App\Http\Controllers\IndependantPerson\classeurController;
 use App\Http\Controllers\IndependantPerson\documentController;
 use App\Http\Controllers\IndependantPerson\dossierController;
 use App\Http\Controllers\CinetPayController;
-
+use App\Http\Controllers\PaymentController;
 
 Route::get('/mes_classeurs', [classeurController::class, 'index'])->name('mes.classeurs');
 
-// CinetPay (paiement téléchargement — URLs courtes pour la limite 120 car. de l’API)
-Route::get('/cp/r/{payment}', [CinetPayController::class, 'retour'])->name('cinetpay.return');
-Route::get('/cp/f/{payment}', [CinetPayController::class, 'echec'])->name('cinetpay.failed');
-Route::match(['get', 'post'], '/cp/n', [CinetPayController::class, 'notify'])->name('cinetpay.notify');
+
+
+Route::post('/payment/initiate', [PaymentController::class, 'initiatePayment'])->name('payment.initiate');
+Route::post('/payment/notify', [PaymentController::class, 'notify'])->name('payment.notify');
+Route::get('/payment/success', [PaymentController::class, 'return'])->name('payment.success');
+
 
 Route::prefix('auto-enregistrement')->name('auto-enregistrement.')->group(function () {
     // Routes publiques (non authentifiées)
