@@ -23,14 +23,14 @@ class DocumentController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'libelle' => 'required|string|max:150',
             'numero' => 'nullable|string|max:25',
             'fichier' => 'required|file|mimes:pdf,jpg,jpeg,png|max:2048',
             'type_document_id' => 'required|exists:type_documents,id'
         ]);
 
-        $data = $request->except('fichier');
+        unset($data['fichier']);
         $data['user_id'] = auth()->id();
 
         if ($request->hasFile('fichier')) {
@@ -55,14 +55,14 @@ class DocumentController extends Controller
 
     public function update(Request $request, Document $document)
     {
-        $request->validate([
+        $data = $request->validate([
             'libelle' => 'required|string|max:150',
             'numero' => 'nullable|string|max:25',
             'fichier' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048',
             'type_document_id' => 'required|exists:type_documents,id'
         ]);
 
-        $data = $request->except('fichier');
+        unset($data['fichier']);
 
         if ($request->hasFile('fichier')) {
             // Supprimer l'ancien fichier

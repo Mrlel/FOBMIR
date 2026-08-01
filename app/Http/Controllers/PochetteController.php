@@ -15,7 +15,7 @@ class PochetteController extends Controller
     public function show(Menage $menage)
     {
         // Vérifier l'accès
-        if (!$this->canAccessMenage($menage)) {
+        if (Auth::user()->cannot('view', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
 
@@ -39,7 +39,7 @@ class PochetteController extends Controller
      */
     public function edit(Menage $menage)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier cette pochette.');
         }
 
@@ -57,7 +57,7 @@ class PochetteController extends Controller
      */
     public function update(Request $request, Menage $menage)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier cette pochette.');
         }
 
@@ -78,45 +78,4 @@ class PochetteController extends Controller
             ->with('success', 'Pochette mise à jour avec succès.');
     }
 
-    /**
-     * Vérifie si l'utilisateur peut accéder à un ménage
-     */
-    private function canAccessMenage(Menage $menage)
-    {
-        $user = Auth::user();
-
-        // Admins et super admins ont accès à tout
-        if (in_array($user->role, ['admin', 'superadmin'])) {
-            return true;
-        }
-
-        // Points focaux : vérifier le village
-        if ($user->role === 'point_focal' && $user->village_id) {
-            $menage->load('sousQuartier.quartier');
-            return $menage->sousQuartier?->quartier?->village_id === $user->village_id;
-        }
-
-        return false;
-    }
-
-    /**
-     * Vérifie si l'utilisateur peut gérer un ménage
-     */
-    private function canManageMenage(Menage $menage)
-    {
-        $user = Auth::user();
-
-        // Admins et super admins peuvent gérer tout
-        if (in_array($user->role, ['admin', 'superadmin'])) {
-            return true;
-        }
-
-        // Points focaux peuvent gérer les ménages de leur village
-        if ($user->role === 'point_focal' && $user->village_id) {
-            $menage->load('sousQuartier.quartier');
-            return $menage->sousQuartier?->quartier?->village_id === $user->village_id;
-        }
-
-        return false;
-    }
 }

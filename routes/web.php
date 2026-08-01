@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenageController;
-use App\Http\Controllers\IndividuController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\PochetteController;
 use App\Http\Controllers\ClasseurController;
@@ -12,15 +11,13 @@ use App\Http\Controllers\Auth\authController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\IndividusController;
-use App\Http\Controllers\LocalisationController;
-use App\Http\Controllers\Admin\LocalisationAdminController;
-use App\Http\Controllers\ClasseurIndependantController;
-use App\Http\Controllers\DocumentIndependantController;
 
 
 
 // Routes pour les ménages
-Route::resource('menages', MenageController::class);
+Route::middleware('auth')->group(function () {
+    Route::resource('menages', MenageController::class);
+});
 
 // Routes pour la gestion hiérarchique des documents : Ménage → Pochette → Dossiers → Classeurs → Documents
 Route::middleware('auth')->group(function () {
@@ -63,18 +60,28 @@ Route::middleware('auth')->group(function () {
 });
 
 // Routes pour les documents
-Route::resource('documents', DocumentController::class);
-Route::get('documents/{document}/download', [DocumentController::class, 'download'])->name('documents.download');
+Route::middleware('auth')->group(function () {
+    Route::resource('documents', DocumentController::class);
+    Route::get('documents/{document}/download', [DocumentController::class, 'download'])->name('documents.download');
+});
 
-// Routes pour les utilisateurs
-Route::resource('users', UserController::class);
+// Routes pour les utilisateurs (réservées aux administrateurs)
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::resource('users', UserController::class);
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/utilisateurs', [AdminController::class, 'utilisateurs'])->name('admin.utilisateurs');
+});
 
-Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-Route::get('/point_focal/dashboard', [AdminController::class, 'dashboardPointFocal'])->name('point_focal.dashboard');
-Route::get('/admin/utilisateurs', [AdminController::class, 'utilisateurs'])->name('admin.utilisateurs');
+Route::middleware('auth')->group(function () {
+    Route::get('/point_focal/dashboard', [AdminController::class, 'dashboardPointFocal'])->name('point_focal.dashboard');
+
+    // Changement de mot de passe (notamment forcé après création de compte)
+    Route::get('/mot-de-passe/modifier', [authController::class, 'showChangePasswordForm'])->name('password.change.form');
+    Route::put('/mot-de-passe/modifier', [authController::class, 'changePassword'])->name('password.change.update');
+});
 
 Route::get('/login', [authController::class, 'showLoginForm'])->name('login.form');
-Route::post('/login', [authController::class, 'login'])->name('login');
+Route::post('/login', [authController::class, 'login'])->middleware('throttle:5,1')->name('login');
 Route::post('/logout', [authController::class, 'logout'])->name('logout');
 Route::get('/userDashboard', [IndividusController::class, 'userDashboard'])->name('userDashboard');
 

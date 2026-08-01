@@ -23,7 +23,7 @@ class ChefSousQuartierController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'nom' => 'required|string|max:150',
             'sexe' => 'required|in:M,F',
             'debut_mandat' => 'nullable|date',
@@ -31,7 +31,7 @@ class ChefSousQuartierController extends Controller
             'sous_quartier_id' => 'required|exists:sous_quartiers,id'
         ]);
 
-        ChefSousQuartier::create($request->all());
+        ChefSousQuartier::create($validated);
 
         return redirect()->route('chefs-sous-quartier.index')
             ->with('success', 'Chef de sous-quartier créé avec succès.');
@@ -50,7 +50,7 @@ class ChefSousQuartierController extends Controller
 
     public function update(Request $request, ChefSousQuartier $chefSousQuartier)
     {
-        $request->validate([
+        $validated = $request->validate([
             'nom' => 'required|string|max:150',
             'sexe' => 'required|in:M,F',
             'debut_mandat' => 'nullable|date',
@@ -58,7 +58,7 @@ class ChefSousQuartierController extends Controller
             'sous_quartier_id' => 'required|exists:sous_quartiers,id'
         ]);
 
-        $chefSousQuartier->update($request->all());
+        $chefSousQuartier->update($validated);
 
         return redirect()->route('chefs-sous-quartier.index')
             ->with('success', 'Chef de sous-quartier modifié avec succès.');

@@ -51,7 +51,7 @@ public function create()
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'nom' => 'required|string|max:150',
             'historique' => 'nullable|string',
             'village_id' => 'required|exists:villages,id',
@@ -61,14 +61,13 @@ public function create()
         // Vérifier que le village appartient au point focal
         if (!$this->isAdminOrSuperAdmin()) {
             $user = Auth::user();
-            if ($user->village_id && $request->village_id != $user->village_id) {
+            if ($user->village_id && $validated['village_id'] != $user->village_id) {
                 return redirect()->back()->with('error', 'Vous ne pouvez créer des quartiers que pour votre village.');
             }
         }
 
-        $data = $request->all();
-        $data['user_id'] = Auth::id();
-        Quartier::create($data);
+        $validated['user_id'] = Auth::id();
+        Quartier::create($validated);
         return redirect()->route('quartiers.index')
             ->with('success', 'Quartier créé avec succès.');
     }
@@ -118,7 +117,7 @@ public function create()
             }
         }
 
-        $request->validate([
+        $validated = $request->validate([
             'nom' => 'required|string|max:150',
             'historique' => 'nullable|string',
             'village_id' => 'required|exists:villages,id',
@@ -128,12 +127,12 @@ public function create()
         // Vérifier que le nouveau village appartient au point focal
         if (!$this->isAdminOrSuperAdmin()) {
             $user = Auth::user();
-            if ($user->village_id && $request->village_id != $user->village_id) {
+            if ($user->village_id && $validated['village_id'] != $user->village_id) {
                 return redirect()->back()->with('error', 'Vous ne pouvez modifier que les quartiers de votre village.');
             }
         }
 
-        $quartier->update($request->all());
+        $quartier->update($validated);
         return redirect()->route('quartiers.index')
             ->with('success', 'Quartier modifié avec succès.');
     }

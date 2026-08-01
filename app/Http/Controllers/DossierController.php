@@ -16,7 +16,7 @@ class DossierController extends Controller
      */
     public function index(Menage $menage)
     {
-        if (!$this->canAccessMenage($menage)) {
+        if (Auth::user()->cannot('view', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
 
@@ -37,7 +37,7 @@ class DossierController extends Controller
      */
     public function create(Menage $menage)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de créer un dossier.');
         }
 
@@ -60,7 +60,7 @@ class DossierController extends Controller
      */
     public function store(Request $request, Menage $menage)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de créer un dossier.');
         }
 
@@ -101,7 +101,7 @@ class DossierController extends Controller
      */
     public function show(Menage $menage, Dossier $dossier)
     {
-        if (!$this->canAccessMenage($menage)) {
+        if (Auth::user()->cannot('view', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
 
@@ -121,7 +121,7 @@ class DossierController extends Controller
      */
     public function edit(Menage $menage, Dossier $dossier)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier ce dossier.');
         }
 
@@ -138,7 +138,7 @@ class DossierController extends Controller
      */
     public function update(Request $request, Menage $menage, Dossier $dossier)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier ce dossier.');
         }
 
@@ -163,7 +163,7 @@ class DossierController extends Controller
      */
     public function destroy(Menage $menage, Dossier $dossier)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de supprimer ce dossier.');
         }
 
@@ -183,30 +183,4 @@ class DossierController extends Controller
             ->with('success', 'Dossier supprimé avec succès.');
     }
 
-    /**
-     * Vérifie si l'utilisateur peut accéder à un ménage
-     */
-    private function canAccessMenage(Menage $menage)
-    {
-        $user = Auth::user();
-
-        if (in_array($user->role, ['admin', 'superadmin'])) {
-            return true;
-        }
-
-        if ($user->role === 'point_focal' && $user->village_id) {
-            $menage->load('sousQuartier.quartier');
-            return $menage->sousQuartier?->quartier?->village_id === $user->village_id;
-        }
-
-        return false;
-    }
-
-    /**
-     * Vérifie si l'utilisateur peut gérer un ménage
-     */
-    private function canManageMenage(Menage $menage)
-    {
-        return $this->canAccessMenage($menage);
-    }
 }

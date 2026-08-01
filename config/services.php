@@ -31,4 +31,14 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'fedapay' => [
+        'public_key' => env('FEDAPAY_PUBLIC_KEY'),
+        'secret_key' => env('FEDAPAY_SECRET_KEY'),
+        'environment' => env('FEDAPAY_ENVIRONMENT', 'sandbox'),
+        'download_price' => env('FEDAPAY_DOWNLOAD_PRICE', 100),
+        // Secret de signature des webhooks (distinct de la clé API), fourni par
+        // le tableau de bord FedaPay. Obligatoire pour valider /api/webhook/fedapay.
+        'webhook_secret' => env('FEDAPAY_WEBHOOK_SECRET'),
+    ],
+
 ];

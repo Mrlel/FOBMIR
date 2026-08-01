@@ -65,6 +65,24 @@ class IndividuIndependant extends Authenticatable
     }
 
     // Méthodes utilitaires
+
+    /**
+     * Marque le profil comme complet si l'e-mail est vérifié et que les
+     * informations personnelles principales sont renseignées.
+     */
+    public function marquerProfilComplet(): void
+    {
+        $complet = (bool) $this->email_verifie
+            && filled($this->telephone)
+            && filled($this->date_naissance)
+            && filled($this->profession)
+            && filled($this->adresse_complete);
+
+        if ($this->profil_complet !== $complet) {
+            $this->update(['profil_complet' => $complet]);
+        }
+    }
+
     public function creerStructureDocuments()
     {
         // Créer le dossier

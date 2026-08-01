@@ -6,25 +6,35 @@ use App\Http\Controllers\IndividuIndependantController;
 use App\Http\Controllers\AutoEnregistrementController;
 use App\Http\Controllers\IndependantPerson\classeurController;
 use App\Http\Controllers\IndependantPerson\documentController;
-use App\Http\Controllers\IndependantPerson\dossierController;
-use App\Http\Controllers\CinetPayController;
-use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\DocumentPaymentController;
 
 Route::get('/mes_classeurs', [classeurController::class, 'index'])->name('mes.classeurs');
 
+// FedaPay — paiement
+Route::get('/document/{document}/buy', [DocumentPaymentController::class, 'buy'])->name('documents.buy');
+Route::post('/payment/initiate/{document}', [DocumentPaymentController::class, 'initiate'])->name('payment.initiate');
+Route::get('/payment/checkout/{payment}', [DocumentPaymentController::class, 'checkout'])->name('payment.checkout');
+Route::get('/payment/verify', [DocumentPaymentController::class, 'verify'])->name('payment.verify');
+Route::get('/payment/failed/{payment}', [DocumentPaymentController::class, 'failed'])->name('payment.failed');
 
+// Téléchargement
+Route::get('/download/{token}', [DocumentPaymentController::class, 'downloadPage'])->name('documents.download.page');
+Route::get('/download/file/{token}', [DocumentPaymentController::class, 'downloadFile'])->name('documents.download.file');
 
-Route::post('/payment/initiate', [PaymentController::class, 'initiatePayment'])->name('payment.initiate');
-Route::post('/payment/notify', [PaymentController::class, 'notify'])->name('payment.notify');
-Route::get('/payment/success', [PaymentController::class, 'return'])->name('payment.success');
+// Webhook (exempté du CSRF)
+Route::post('/api/webhook/fedapay', [DocumentPaymentController::class, 'webhook'])
+    ->name('payment.webhook')
+    ->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 
+// Webhook
+Route::post('/api/webhook/fedapay', [DocumentPaymentController::class, 'webhook'])->name('payment.webhook');
 
 Route::prefix('auto-enregistrement')->name('auto-enregistrement.')->group(function () {
     // Routes publiques (non authentifiées)
         Route::get('/inscription', [AutoEnregistrementController::class, 'showRegistrationForm'])->name('register');
         Route::post('/inscription', [AutoEnregistrementController::class, 'register'])->name('register.post');
         Route::get('/connexion', [AutoEnregistrementController::class, 'showLoginForm'])->name('login');
-        Route::post('/connexion', [AutoEnregistrementController::class, 'login'])->name('login.post');
+        Route::post('/connexion', [AutoEnregistrementController::class, 'login'])->middleware('throttle:5,1')->name('login.post');
         Route::post('/deconnexion', [AutoEnregistrementController::class, 'logout'])->name('deconnexion');
     
     // Vérification email (accessible sans authentification)

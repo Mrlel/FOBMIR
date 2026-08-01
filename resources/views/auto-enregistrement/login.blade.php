@@ -1,179 +1,188 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recruitify - Connexion</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MyPapyrus – Connexion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root {
-            --bg-dark: #072b3e;
-            --primary-green: #2ecc71;
-            --input-bg: rgba(255, 255, 255, 0.1);
+            --orange: #F06A1D;
+            --orange-light: #FF8C42;
+            --teal: #1B5E57;
+            --teal-dark: #0E3D38;
+            --cream: #FBF7F2;
+            --warm-white: #FFFDF9;
+            --text-dark: #1A1A1A;
+            --text-muted: #6B7280;
         }
 
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-dark);
+        body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); min-height: 100vh; overflow-x: hidden; }
+        
+        /* Panneau Gauche */
+        .login-left {
+            background: linear-gradient(155deg, var(--teal-dark) 0%, var(--teal) 60%);
+            padding: 50px;
             color: white;
-            overflow: hidden;
-        }
-
-        /* Arrière-plan avec vagues en bas */
-        .login-container {
-            height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(180deg, #0b0f2a 85%, #000000 100%);
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
             position: relative;
         }
 
-        .login-card {
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-            z-index: 10;
+        .left-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; line-height: 1.2; }
+        .left-title em { color: var(--orange-light); font-style: normal; }
+        
+        .impact-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; margin-bottom: 10px;
         }
 
-        .logo-top-left {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
+        /* Panneau Droit */
+        .login-right { background: var(--warm-white); padding: 60px 40px; display: flex; align-items: center; justify-content: center; }
+        .auth-card { width: 100%; max-width: 420px; animation: fadeIn 0.6s ease-out; }
 
-        .lang-selector {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 0.9rem;
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Styles des champs de saisie */
         .form-control {
-            background-color: var(--input-bg);
-            border: none;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            background: var(--cream); border: 1.5px solid #e8e2da; border-radius: 12px;
+            padding: 12px 16px; font-size: 0.9rem; transition: all 0.3s;
         }
 
-        .form-control:focus {
-            background-color: rgba(255, 255, 255, 0.15);
-            box-shadow: none;
-            color: white;
-            border: 1px solid var(--primary-green);
+        .form-control:focus { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(27,94,87,0.1); background: #fff; }
+
+        .btn-primary {
+            background: var(--orange); border: none; border-radius: 12px; padding: 14px;
+            font-weight: 700; letter-spacing: 0.5px; transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(240,106,29,0.3);
         }
 
-        .form-control::placeholder {
-            color: #adb5bd;
-            font-size: 0.9rem;
-        }
+        .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
 
-        /* Bouton Login */
-        .btn-login {
-            background-color: var(--primary-green);
-            border: none;
-            width: 100%;
-            padding: 12px;
-            border-radius: 25px;
-            color: white;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: 0.3s;
-        }
+        .input-group-text { background: var(--cream); border: 1.5px solid #e8e2da; border-right: none; color: var(--text-muted); border-radius: 12px 0 0 12px; }
+        .form-control-with-icon { border-left: none; border-radius: 0 12px 12px 0; }
 
-        .btn-login:hover {
-            background-color: #27ae60;
-            transform: translateY(-2px);
-        }
-
-        .links-container {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            color: #adb5bd;
-        }
-
-        .links-container a {
-            color: var(--primary-green);
-            text-decoration: none;
-        }
-
-        .footer-text {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-            color: #888;
-            font-size: 0.75rem;
-        }
+        .auth-footer { text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--text-muted); }
+        .auth-footer a { color: var(--orange); font-weight: 600; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <div class="logo-top-left">
-        <span style="color: white;">R</span><span style="color: var(--primary-green);">ecruitify</span>
-    </div>
-
-    <div class="lang-selector">
-        🇬🇧 EN
-    </div>
-
-    <div class="login-container">
-        <div class="login-card p-4">
-            <div class="mb-4">
-                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M12 6V12L16 14" stroke="#2ecc71" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <h1 class="h2 mt-3">Sign in</h1>
-                <p class="small text-secondary">Sign in and start managing your candidates!</p>
+<div class="container-fluid p-0">
+    <div class="row g-0">
+        <div class="col-lg-6 d-none d-lg-flex">
+            <div class="login-left w-100">
+                <div>
+                      <a class="navbar-brand" href="/">
+                            <img src="/logo_p.jpeg" height="90" alt="Paysage rural">
+                        </a>
+                    <div class="left-eyebrow mb-2 text-uppercase fw-bold pt-2" style="letter-spacing:2px; font-size:0.7rem; color:var(--orange-light)">Système d'Archivage Rural</div>
+                    <h1 class="left-title mb-4">Protégez votre <em>patrimoine</em> documentaire.</h1>
+                    <p class="opacity-75 mb-5" style="max-width: 450px; line-height: 1.7;">
+                        L'outil de confiance pour la sauvegarde numérique des actes d'état civil et des titres fonciers en milieu rural.
+                    </p>
+                    
+                    <div class="d-flex flex-wrap gap-2">
+                        <div class="impact-pill"><i class="bi bi-shield-lock"></i> Sécurité maximale</div>
+                        <div class="impact-pill"><i class="bi bi-geo-alt"></i> Géolocalisation</div>
+                        <div class="impact-pill"><i class="bi bi-cloud-check"></i> Accès permanent</div>
+                    </div>
+                </div>
+                
+                <div class="pt-4 border-top border-white border-opacity-10">
+                    <p class="small opacity-50 m-0">&copy; 2026 Projet FOBMIR. Tous droits réservés.</p>
+                </div>
             </div>
+        </div>
 
-             <form method="POST" action="{{ route('auto-enregistrement.login.post') }}">
+        <div class="col-lg-6 login-right">
+            <div class="auth-card">
+                <div class="text-center mb-5 d-lg-none">
+                    <h2 style="font-family:'Playfair Display',serif; font-weight:900; color:var(--teal-dark)">
+                        <i class="bi bi-heart-fill me-2" style="color:var(--orange)"></i>MyPapyrus
+                    </h2>
+                </div>
+
+                <h2 class="mb-2" style="font-family:'Playfair Display',serif; font-weight:900;">Connexion</h2>
+                <p class="text-muted mb-4">Accédez à votre espace d'archivage sécurisé.</p>
+
+                @if(session('error'))
+                    <div class="alert alert-danger border-0 rounded-4 mb-4 small">
+                        <i class="bi bi-exclamation-circle me-2"></i> {{ session('error') }}
+                    </div>
+                @endif
+
+                <form method="POST" action="{{ route('auto-enregistrement.login.post') }}">
                     @csrf
-
-                    <div class="form-floating">
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" 
-                               id="email" name="email" value="{{ old('email') }}" required autofocus>
-                        <label for="email"><i class="fas fa-envelope me-2"></i>Email</label>
-                        @error('email')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                    
+                    <div class="mb-4">
+                        <label class="form-label fw-bold small">Adresse Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="email" name="email" class="form-control form-control-with-icon" 
+                                   placeholder="nom@exemple.com" required autofocus>
+                        </div>
                     </div>
 
-                    <div class="form-floating">
-                        <input type="password" class="form-control @error('password') is-invalid @enderror" 
-                               id="password" name="password" required>
-                        <label for="password"><i class="fas fa-lock me-2"></i>Mot de passe</label>
-                        @error('password')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <label class="form-label fw-bold small">Mot de passe</label>
+                            <a href="#" class="small text-decoration-none" style="color:var(--orange)">Oublié ?</a>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                            <input type="password" name="password" id="password" class="form-control form-control-with-icon" 
+                                   placeholder="••••••••" required>
+                            <button type="button" class="btn border-1 border-start-0" 
+                                    style="border-color:#e8e2da; background:var(--cream); border-radius: 0 12px 12px 0;"
+                                    onclick="togglePassword()">
+                                <i class="bi bi-eye text-muted" id="toggleIcon"></i>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="form-check mb-3">
-                        <a href="{{ route('auto-enregistrement.register') }}">Créer un compte</a>
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                        <label class="form-check-label small text-muted" for="remember">Rester connecté</label>
                     </div>
 
-                    <button type="submit" class="btn btn-login">
-                        <i class="fas fa-sign-in-alt me-2"></i>Se connecter
+                    <button type="submit" class="btn btn-primary w-100 mb-3">
+                        SE CONNECTER <i class="bi bi-arrow-right ms-2"></i>
                     </button>
                 </form>
+
+                <div class="auth-footer">
+                    Pas encore de compte ? <a href="{{ route('auto-enregistrement.register') }}">Créer un compte</a>
+                </div>
+                
+                <div class="mt-5 d-flex justify-content-center gap-4 opacity-50">
+                    <i class="bi bi-shield-fill-check h4" title="SSL Sécurisé"></i>
+                    <i class="bi bi-fingerprint h4" title="Authentification forte"></i>
+                    <i class="bi bi-hdd-network-fill h4" title="Archivage Cloud"></i>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="footer-text">
-        2018 © Recruitify. All rights reserved.<br>
-        Designed by Lukasz Swierad
-    </div>
+<script>
+    function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        const icon = document.getElementById('toggleIcon');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.replace('bi-eye', 'bi-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.replace('bi-eye-slash', 'bi-eye');
+        }
+    }
+</script>
 
 </body>
 </html>

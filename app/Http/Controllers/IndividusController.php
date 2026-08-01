@@ -77,13 +77,13 @@ class IndividusController extends Controller
             return redirect()->back()->with('error', 'Votre compte n\'a pas de géolocalisation assignée. Veuillez contacter un administrateur.');
         }
 
-        $request->validate([
+        $data = $request->validate([
             'nom' => 'required|string|max:100',
             'prenom' => 'required|string|max:150',
             'telephone' => 'nullable|string',
             'date_naissance' => 'required|date',
             'lieu_naissance' => 'required|string',
-            'numpiece' => 'required|string|max:25',
+            'numpiece' => 'required|string|max:25|unique:individu_menage,numpiece',
             'num_extrait_naissance' => 'required|string|max:25',
             'emploi' => 'nullable|string|max:150',
             'doc_piece' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048',
@@ -92,14 +92,14 @@ class IndividusController extends Controller
 
         // Vérifier que le ménage appartient au village du point focal
         if ($user->village_id) {
-            $menage = Menage::with('sousQuartier.quartier')->findOrFail($request->menage_id);
+            $menage = Menage::with('sousQuartier.quartier')->findOrFail($data['menage_id']);
             if ($menage->sousQuartier->quartier->village_id !== $user->village_id) {
                 return redirect()->back()->with('error', 'Le ménage sélectionné n\'appartient pas à votre village.');
             }
         }
 
-        $data = $request->except('doc_piece');
-        
+        unset($data['doc_piece']);
+
         // 🔥 IMPORTANT : L'individu hérite automatiquement de la géolocalisation du point focal
         $data['point_focal_id'] = $user->id;
 
@@ -206,13 +206,13 @@ class IndividusController extends Controller
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier cet individu.');
         }
 
-        $request->validate([
+        $data = $request->validate([
             'nom' => 'required|string|max:100',
             'prenom' => 'required|string|max:150',
             'telephone' => 'nullable|string',
             'date_naissance' => 'required|date',
             'lieu_naissance' => 'required|string',
-            'numpiece' => 'required|string|max:25',
+            'numpiece' => 'required|string|max:25|unique:individu_menage,numpiece,' . $individu->id,
             'num_extrait_naissance' => 'required|string|max:25',
             'emploi' => 'nullable|string|max:150',
             'doc_piece' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048',
@@ -221,13 +221,13 @@ class IndividusController extends Controller
 
         // Vérifier que le ménage appartient au village du point focal
         if ($user->village_id) {
-            $menage = Menage::with('sousQuartier.quartier')->findOrFail($request->menage_id);
+            $menage = Menage::with('sousQuartier.quartier')->findOrFail($data['menage_id']);
             if ($menage->sousQuartier->quartier->village_id !== $user->village_id) {
                 return redirect()->back()->with('error', 'Le ménage sélectionné n\'appartient pas à votre village.');
             }
         }
 
-        $data = $request->except('doc_piece');
+        unset($data['doc_piece']);
 
         // Gérer le fichier de pièce
         if ($request->hasFile('doc_piece')) {
@@ -316,14 +316,14 @@ class IndividusController extends Controller
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation d\'ajouter des documents à cet individu.');
         }
 
-        $request->validate([
+        $data = $request->validate([
             'libelle' => 'required|string|max:150',
             'numero' => 'nullable|string|max:25',
             'fichier' => 'required|file|mimes:pdf,jpg,jpeg,png,doc,docx|max:5120', // 5MB max
             'type_document_id' => 'required|exists:type_documents,id',
         ]);
 
-        $data = $request->except('fichier');
+        unset($data['fichier']);
         $data['user_id'] = Auth::id();
         $data['individu_menage_id'] = $individu->id;
         $data['menage_id'] = $individu->menage_id;
@@ -398,14 +398,14 @@ class IndividusController extends Controller
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier ce document.');
         }
 
-        $request->validate([
+        $data = $request->validate([
             'libelle' => 'required|string|max:150',
             'numero' => 'nullable|string|max:25',
             'fichier' => 'nullable|file|mimes:pdf,jpg,jpeg,png,doc,docx|max:5120',
             'type_document_id' => 'required|exists:type_documents,id',
         ]);
 
-        $data = $request->except('fichier');
+        unset($data['fichier']);
 
         // Gérer le fichier si un nouveau est uploadé
         if ($request->hasFile('fichier')) {

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container py-4">
     <div class="d-flex align-items-center mb-4">
-        <div class="bg-primary-green-soft p-3 rounded-circle me-3">
+        <div class="p-3 me-3">
             <i class="bi bi-person-bounding-box fs-2 text-success"></i>
         </div>
         <div>

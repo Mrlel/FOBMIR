@@ -16,7 +16,7 @@ class ClasseurController extends Controller
      */
     public function index(Menage $menage)
     {
-        if (!$this->canAccessMenage($menage)) {
+        if (Auth::user()->cannot('view', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
 
@@ -34,7 +34,7 @@ class ClasseurController extends Controller
 
     public function createInDossier(Menage $menage, Dossier $dossier)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de créer un classeur.');
         }
 
@@ -53,7 +53,7 @@ class ClasseurController extends Controller
      */
     public function storeInDossier(Request $request, Menage $menage, Dossier $dossier)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de créer un classeur.');
         }
 
@@ -91,7 +91,7 @@ class ClasseurController extends Controller
   
     public function showDossierClasseur(Menage $menage, Dossier $dossier, Classeur $classeur)
     {
-        if (!$this->canAccessMenage($menage)) {
+        if (Auth::user()->cannot('view', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
 
@@ -106,7 +106,7 @@ class ClasseurController extends Controller
     }
     public function create(Menage $menage)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de créer un classeur.');
         }
 
@@ -124,7 +124,7 @@ class ClasseurController extends Controller
 
     public function store(Request $request, Menage $menage)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de créer un classeur.');
         }
 
@@ -152,7 +152,7 @@ class ClasseurController extends Controller
 
     public function show(Menage $menage, Classeur $classeur)
     {
-        if (!$this->canAccessMenage($menage)) {
+        if (Auth::user()->cannot('view', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
 
@@ -165,7 +165,7 @@ class ClasseurController extends Controller
 
     public function edit(Menage $menage, Classeur $classeur)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier ce classeur.');
         }
 
@@ -182,7 +182,7 @@ class ClasseurController extends Controller
 
     public function update(Request $request, Menage $menage, Classeur $classeur)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier ce classeur.');
         }
 
@@ -205,7 +205,7 @@ class ClasseurController extends Controller
  
     public function destroy(Menage $menage, Classeur $classeur)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de supprimer ce classeur.');
         }
 
@@ -242,25 +242,4 @@ class ClasseurController extends Controller
     }
 
 
-    private function canAccessMenage(Menage $menage)
-    {
-        $user = Auth::user();
-
-        if (in_array($user->role, ['admin', 'superadmin'])) {
-            return true;
-        }
-
-        if ($user->role === 'point_focal' && $user->village_id) {
-            $menage->load('sousQuartier.quartier');
-            return $menage->sousQuartier?->quartier?->village_id === $user->village_id;
-        }
-
-        return false;
-    }
-
-    
-    private function canManageMenage(Menage $menage)
-    {
-        return $this->canAccessMenage($menage);
-    }
 }

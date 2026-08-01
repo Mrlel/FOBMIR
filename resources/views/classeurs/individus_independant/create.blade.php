@@ -4,8 +4,8 @@
 
 <style>
     :root {
-        --primary-gold: #b68c36;
-        --secondary-blue: #171e4c;
+        --primary-gold: #FF8C42;
+        --secondary-blue: #0E3D38;
     }
 
     .form-card {

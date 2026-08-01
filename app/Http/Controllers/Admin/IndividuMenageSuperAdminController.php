@@ -98,7 +98,7 @@ class IndividuMenageSuperAdminController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'nom' => 'required|string|max:100',
             'prenom' => 'required|string|max:150',
             'telephone' => 'nullable|string',
@@ -108,7 +108,7 @@ class IndividuMenageSuperAdminController extends Controller
             'num_extrait_naissance' => 'required|string|max:25',
             'emploi' => 'nullable|string|max:150',
             'doc_piece' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048',
-            
+
             // Géolocalisation complète
             'pays_id' => 'required|exists:pays,id',
             'district_id' => 'nullable|exists:districts,id',
@@ -120,13 +120,13 @@ class IndividuMenageSuperAdminController extends Controller
             'quartier_id' => 'nullable|exists:quartiers,id',
             'sous_quartier_id' => 'nullable|exists:sous_quartiers,id',
             'menage_id' => 'required|exists:menages,id',
-            
+
             // Point focal (optionnel pour superadmin)
             'point_focal_id' => 'nullable|exists:users,id',
         ]);
 
-        $data = $request->except('doc_piece');
-        
+        unset($data['doc_piece']);
+
         // Si aucun point focal n'est spécifié, utiliser le superadmin connecté
         if (!$request->filled('point_focal_id')) {
             $data['point_focal_id'] = Auth::id();
@@ -233,7 +233,7 @@ class IndividuMenageSuperAdminController extends Controller
      */
     public function update(Request $request, IndividusMenage $individuMenage)
     {
-        $request->validate([
+        $data = $request->validate([
             'nom' => 'required|string|max:100',
             'prenom' => 'required|string|max:150',
             'telephone' => 'nullable|string',
@@ -243,7 +243,7 @@ class IndividuMenageSuperAdminController extends Controller
             'num_extrait_naissance' => 'required|string|max:25',
             'emploi' => 'nullable|string|max:150',
             'doc_piece' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048',
-            
+
             // Géolocalisation complète
             'pays_id' => 'required|exists:pays,id',
             'district_id' => 'nullable|exists:districts,id',
@@ -255,12 +255,12 @@ class IndividuMenageSuperAdminController extends Controller
             'quartier_id' => 'nullable|exists:quartiers,id',
             'sous_quartier_id' => 'nullable|exists:sous_quartiers,id',
             'menage_id' => 'required|exists:menages,id',
-            
+
             // Point focal
             'point_focal_id' => 'nullable|exists:users,id',
         ]);
 
-        $data = $request->except('doc_piece');
+        unset($data['doc_piece']);
 
         // Gérer le fichier de pièce
         if ($request->hasFile('doc_piece')) {

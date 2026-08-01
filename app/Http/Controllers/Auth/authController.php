@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class authController extends Controller
 {
@@ -38,13 +39,25 @@ class authController extends Controller
         $request->session()->regenerate();
     
         // Redirection après connexion
-        return redirect()->intended(
-            $user->role === 'admin' || $user->role === 'point_focal' || $user->role === 'superadmin'
-                ? route('admin.dashboard')
-                : route('userDashboard')
-        )->with('success', 'Connexion réussie ! Bienvenue');
+        return redirect()->intended($this->dashboardRouteFor($user))
+            ->with('success', 'Connexion réussie ! Bienvenue');
     }
-    
+
+    /**
+     * Détermine la route de tableau de bord adaptée au rôle de l'utilisateur.
+     * Les rôles admin/superadmin ne sont pas redirigés vers point_focal.dashboard
+     * (qui n'affiche que les individus du point focal connecté), et inversement
+     * point_focal n'a pas accès à admin.dashboard (protégé par le middleware "admin").
+     */
+    private function dashboardRouteFor(User $user): string
+    {
+        return match ($user->role) {
+            'admin', 'superadmin' => route('admin.dashboard'),
+            'point_focal' => route('point_focal.dashboard'),
+            default => route('userDashboard'),
+        };
+    }
+
 
     public function logout(Request $request)
     {
@@ -53,6 +66,35 @@ class authController extends Controller
         $request->session()->regenerateToken();
 
         return redirect()->route('login.form');
+    }
+
+    public function showChangePasswordForm()
+    {
+        return view('Auth.change-password');
+    }
+
+    public function changePassword(Request $request)
+    {
+        $user = Auth::user();
+
+        $request->validate([
+            'current_password' => 'required|string',
+            'password' => ['required', 'confirmed', Password::defaults()],
+        ]);
+
+        if (! Hash::check($request->current_password, $user->password)) {
+            return back()->withErrors([
+                'current_password' => 'Le mot de passe actuel est incorrect.',
+            ]);
+        }
+
+        $user->update([
+            'password' => Hash::make($request->password),
+            'must_change_password' => false,
+        ]);
+
+        return redirect()->to($this->dashboardRouteFor($user))
+            ->with('success', 'Mot de passe modifié avec succès.');
     }
 
 }

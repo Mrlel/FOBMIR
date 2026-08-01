@@ -103,15 +103,14 @@ class IndividuIndependantController extends Controller
     public function showDossier()
     {
         $individu = Auth::guard('individu')->user();
-        $dossier = $individu->dossierIndependant;
+        $dossier = $individu->dossier;
 
         if (!$dossier) {
             // Créer la structure si elle n'existe pas
-            $individu->creerStructureDocuments();
-            $dossier = $individu->dossierIndependant;
+            $dossier = $individu->creerStructureDocuments();
         }
 
-        $classeurs = $individu->classeurs()->active()->with('documents')->orderBy('ordre')->get();
+        $classeurs = $individu->classeurs()->with('documents')->orderBy('created_at')->get();
 
         return view('individu.dossier', compact('individu', 'dossier', 'classeurs'));
     }

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\IndividuIndependant;
-use App\Models\Ville;
 use App\Models\Pays;
 use App\Models\District;
 use App\Models\Region;
@@ -38,9 +37,9 @@ class AutoEnregistrementController extends Controller
             'profession' => 'nullable|string|max:255',
             'adresse_complete' => 'nullable|string',
 
-            // Géolocalisation GOP
-            'latitude' => 'numeric|between:-90,90',
-            'longitude' => 'numeric|between:-180,180',
+            // Géolocalisation GPS (obligatoire : colonnes non nullables en base)
+            'latitude' => 'required|numeric|between:-90,90',
+            'longitude' => 'required|numeric|between:-180,180',
         ]);
 
         // Créer l'individu indépendant

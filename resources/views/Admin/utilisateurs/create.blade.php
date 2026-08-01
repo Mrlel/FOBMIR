@@ -2,6 +2,21 @@
 
 @section('content')
 
+@if (session('generated_password'))
+    <div class="alert alert-success border border-success">
+        <strong><i class="fas fa-key"></i> Mot de passe temporaire généré :</strong>
+        <code class="fs-5 ms-2 user-select-all">{{ session('generated_password') }}</code>
+        <div class="small mt-2 mb-0">
+            Communiquez ce mot de passe à l'utilisateur par un canal sécurisé. Il ne sera plus affiché
+            après ce message et devra être changé dès la première connexion.
+        </div>
+    </div>
+@endif
+
+@if (session('error'))
+    <div class="alert alert-danger">{{ session('error') }}</div>
+@endif
+
 <form action="{{ route('users.store') }}" method="POST" id="userForm">
 @csrf
 

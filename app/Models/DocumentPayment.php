@@ -2,33 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class DocumentPayment extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         'document_id',
-        'payer_type',
-        'payer_id',
-        'provider',
-        'status',
-        'amount',
-        'token',
-        'payment_url',
-        'numero_send',
-        'nomclient',
-        'provider_payload',
-        'paid_at',
+        'email_acheteur',
+        'telephone_acheteur',
+        'nom_acheteur',
+        'statut',
+        'transaction_id',
+        'token_telechargement',
+        'paye_le',
     ];
 
     protected $casts = [
-        'provider_payload' => 'array',
-        'paid_at' => 'datetime',
+        'paye_le' => 'datetime',
     ];
 
     public function document(): BelongsTo
@@ -36,14 +27,8 @@ class DocumentPayment extends Model
         return $this->belongsTo(Document::class);
     }
 
-    public function payer(): MorphTo
+    public function scopePaye($query)
     {
-        return $this->morphTo();
-    }
-
-    public function scopePaid($query)
-    {
-        return $query->where('status', 'paid');
+        return $query->where('statut', 'paye');
     }
 }
-

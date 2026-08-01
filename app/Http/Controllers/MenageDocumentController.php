@@ -18,7 +18,7 @@ class MenageDocumentController extends Controller
      */
     public function create(Menage $menage, Classeur $classeur)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation d\'ajouter des documents.');
         }
 
@@ -39,13 +39,13 @@ class MenageDocumentController extends Controller
      */
     public function store(Request $request, Menage $menage, Classeur $classeur)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation d\'ajouter des documents.');
         }
 
    
 
-        $request->validate([
+        $data = $request->validate([
             'libelle' => 'required|string|max:150',
             'numero' => 'nullable|string|max:25',
             'fichier' => 'required|file|mimes:pdf,jpg,jpeg,png,doc,docx|max:5120',
@@ -54,13 +54,13 @@ class MenageDocumentController extends Controller
             'concerne_menage' => 'boolean',
         ]);
 
-        $data = $request->except('fichier');
+        unset($data['fichier']);
         $data['classeur_id'] = $classeur->id;
         $data['menage_id'] = $menage->id;
         $data['date_ajout'] = now();
 
         // Si le document ne concerne pas un individu spécifique, il concerne le ménage
-        if (!$request->individu_menage_id || $request->concerne_menage) {
+        if (empty($data['individu_menage_id']) || $request->boolean('concerne_menage')) {
             $data['individu_menage_id'] = null;
         }
 
@@ -83,7 +83,7 @@ class MenageDocumentController extends Controller
      */
     public function show(Menage $menage, Classeur $classeur, Document $document)
     {
-        if (!$this->canAccessMenage($menage)) {
+        if (Auth::user()->cannot('view', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce document.');
         }
 
@@ -102,7 +102,7 @@ class MenageDocumentController extends Controller
      */
     public function edit(Menage $menage, Classeur $classeur, Document $document)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier ce document.');
         }
 
@@ -122,7 +122,7 @@ class MenageDocumentController extends Controller
      */
     public function update(Request $request, Menage $menage, Classeur $classeur, Document $document)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de modifier ce document.');
         }
 
@@ -131,7 +131,7 @@ class MenageDocumentController extends Controller
             return redirect()->back()->with('error', 'Document non trouvé.');
         }
 
-        $request->validate([
+        $data = $request->validate([
             'libelle' => 'required|string|max:150',
             'numero' => 'nullable|string|max:25',
             'fichier' => 'nullable|file|mimes:pdf,jpg,jpeg,png,doc,docx|max:5120',
@@ -140,10 +140,10 @@ class MenageDocumentController extends Controller
             'concerne_menage' => 'boolean',
         ]);
 
-        $data = $request->except('fichier');
+        unset($data['fichier']);
 
         // Si le document ne concerne pas un individu spécifique, il concerne le ménage
-        if (!$request->individu_menage_id || $request->concerne_menage) {
+        if (empty($data['individu_menage_id']) || $request->boolean('concerne_menage')) {
             $data['individu_menage_id'] = null;
         }
 
@@ -171,7 +171,7 @@ class MenageDocumentController extends Controller
      */
     public function destroy(Menage $menage, Classeur $classeur, Document $document)
     {
-        if (!$this->canManageMenage($menage)) {
+        if (Auth::user()->cannot('update', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas l\'autorisation de supprimer ce document.');
         }
 
@@ -196,7 +196,7 @@ class MenageDocumentController extends Controller
      */
     public function download(Menage $menage, Classeur $classeur, Document $document)
     {
-        if (!$this->canAccessMenage($menage)) {
+        if (Auth::user()->cannot('view', $menage)) {
             return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce document.');
         }
 
@@ -212,30 +212,4 @@ class MenageDocumentController extends Controller
         return Storage::disk('public')->download($document->fichier, $document->nom_fichier);
     }
 
-    /**
-     * Vérifie si l'utilisateur peut accéder à un ménage
-     */
-    private function canAccessMenage(Menage $menage)
-    {
-        $user = Auth::user();
-
-        if (in_array($user->role, ['admin', 'superadmin'])) {
-            return true;
-        }
-
-        if ($user->role === 'point_focal' && $user->village_id) {
-            $menage->load('sousQuartier.quartier');
-            return $menage->sousQuartier?->quartier?->village_id === $user->village_id;
-        }
-
-        return false;
-    }
-
-    /**
-     * Vérifie si l'utilisateur peut gérer un ménage
-     */
-    private function canManageMenage(Menage $menage)
-    {
-        return $this->canAccessMenage($menage);
-    }
 }

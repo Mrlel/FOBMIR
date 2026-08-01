@@ -65,7 +65,7 @@ class MenageController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'nom_chef' => 'required|string|max:150',
             'nb_individus' => 'nullable|integer|min:1',
             'sexe_chef' => 'required|in:M,F',
@@ -77,14 +77,14 @@ class MenageController extends Controller
         if (!$this->isAdminOrSuperAdmin()) {
             $user = Auth::user();
             if ($user->village_id) {
-                $sousQuartier = SousQuartier::with('quartier')->findOrFail($request->sous_quartier_id);
+                $sousQuartier = SousQuartier::with('quartier')->findOrFail($validated['sous_quartier_id']);
                 if ($sousQuartier->quartier->village_id !== $user->village_id) {
                     return redirect()->back()->with('error', 'Le sous-quartier sélectionné n\'appartient pas à votre village.');
                 }
             }
         }
 
-        Menage::create($request->all());
+        Menage::create($validated);
 
         return redirect()->route('menages.index')
             ->with('success', 'Ménage créé avec succès.');
@@ -92,33 +92,19 @@ class MenageController extends Controller
 
     public function show(Menage $menage)
     {
-        // Vérifier l'accès pour les points focaux
-        if (!$this->isAdminOrSuperAdmin()) {
-            $user = Auth::user();
-            if ($user->village_id) {
-                $menage->load('sousQuartier.quartier');
-                if ($menage->sousQuartier->quartier->village_id !== $user->village_id) {
-                    return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
-                }
-            }
+        if (Auth::user()->cannot('view', $menage)) {
+            return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
-        
+
         return view('menages.show', compact('menage'));
     }
 
     public function edit(Menage $menage)
     {
-        // Vérifier l'accès pour les points focaux
-        if (!$this->isAdminOrSuperAdmin()) {
-            $user = Auth::user();
-            if ($user->village_id) {
-                $menage->load('sousQuartier.quartier');
-                if ($menage->sousQuartier->quartier->village_id !== $user->village_id) {
-                    return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
-                }
-            }
+        if (Auth::user()->cannot('update', $menage)) {
+            return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
-        
+
         // Filtrer les sous-quartiers par village si point focal
         $sousQuartiersQuery = SousQuartier::with('quartier');
         if (!$this->isAdminOrSuperAdmin()) {
@@ -137,18 +123,11 @@ class MenageController extends Controller
 
     public function update(Request $request, Menage $menage)
     {
-        // Vérifier l'accès pour les points focaux
-        if (!$this->isAdminOrSuperAdmin()) {
-            $user = Auth::user();
-            if ($user->village_id) {
-                $menage->load('sousQuartier.quartier');
-                if ($menage->sousQuartier->quartier->village_id !== $user->village_id) {
-                    return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
-                }
-            }
+        if (Auth::user()->cannot('update', $menage)) {
+            return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
 
-        $request->validate([
+        $validated = $request->validate([
             'nom_chef' => 'required|string|max:150',
             'nb_individus' => 'nullable|integer|min:1',
             'sexe_chef' => 'required|in:M,F',
@@ -160,14 +139,14 @@ class MenageController extends Controller
         if (!$this->isAdminOrSuperAdmin()) {
             $user = Auth::user();
             if ($user->village_id) {
-                $sousQuartier = SousQuartier::with('quartier')->findOrFail($request->sous_quartier_id);
+                $sousQuartier = SousQuartier::with('quartier')->findOrFail($validated['sous_quartier_id']);
                 if ($sousQuartier->quartier->village_id !== $user->village_id) {
                     return redirect()->back()->with('error', 'Le sous-quartier sélectionné n\'appartient pas à votre village.');
                 }
             }
         }
 
-        $menage->update($request->all());
+        $menage->update($validated);
 
         return redirect()->route('menages.index')
             ->with('success', 'Ménage modifié avec succès.');
@@ -175,17 +154,10 @@ class MenageController extends Controller
 
     public function destroy(Menage $menage)
     {
-        // Vérifier l'accès pour les points focaux
-        if (!$this->isAdminOrSuperAdmin()) {
-            $user = Auth::user();
-            if ($user->village_id) {
-                $menage->load('sousQuartier.quartier');
-                if ($menage->sousQuartier->quartier->village_id !== $user->village_id) {
-                    return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
-                }
-            }
+        if (Auth::user()->cannot('delete', $menage)) {
+            return redirect()->back()->with('error', 'Vous n\'avez pas accès à ce ménage.');
         }
-        
+
         $menage->delete();
 
         return redirect()->route('menages.index')
